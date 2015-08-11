@@ -442,7 +442,7 @@ footer {
   padding-top: 10vh; }
   @media all and (min-width: 800px) {
     .feature {
-      padding-top: 25vh; } }
+      padding-top: 15vh; } }
   .feature .banner {
     background: rgba(0, 0, 0, 0.2);
     padding: 40px 0; }
