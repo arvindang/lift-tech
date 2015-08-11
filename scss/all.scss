@@ -1,14 +1,67 @@
+// RESETS
+
+@import 'normalize';
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// TYPOGRAPHY IMPORTS
+
+@font-face {
+  font-family: idlewildBold;
+  src: url("assets/fonts/Idlewild-Bold.otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: idlewildBook;
+  src: url("assets/fonts/Idlewild-Book.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: idlewildLight;
+  src: url("assets/fonts/Idlewild-Light.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: idlewildMedium;
+  src: url("assets/fonts/Idlewild-Medium.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: idlewildThin;
+  src: url("assets/fonts/Idlewild-Thin.otf");
+  font-weight: normal;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+// AUTHOR STYLES
+
 body {
-	background: url(assets/images/lift-gif-frames.gif) #000 no-repeat center center fixed;
+	background: url(assets/images/lift-gif-frames.gif) #000 no-repeat left center fixed;
 	background-size: cover;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
 }
 
 video#bgvid {
 	display: none;
-}
+	visibility: hidden;
 
-@media screen and (min-device-width: 800px) {
-	video#bgvid {
+	@media all and (min-width: 800px) {
+		visibility: visible;
 		display: block;
 		position: fixed;
 		top: 50%;
@@ -23,8 +76,90 @@ video#bgvid {
 		background: url(assets/images/drone-takeoff.jpg) no-repeat;
 		background-size: cover;
 	}
+}
 
-	body {
-		background: #fff;
+header h1, .feature, footer {
+	color: #fff;
+}
+
+header {
+	background: rgba(0, 0, 0, .6);
+	padding: 10px 0 10px 20px;
+
+	h1 {
+		margin: 0;
+		font-size: 1.5em;
+	}
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: rgba(0, 0, 0, .6);
+	padding: 20px;
+	font-size: .8em;
+
+	.copyright {
+		float: left;
+		margin: 0;
+	}
+
+	.contact-link {
+		float: right;
+		color: white;
+		text-decoration: none;
+	}
+}
+
+.feature {
+	text-align: center;
+	padding-top: 10vh;
+
+	@media all and (min-width: 800px) {
+		padding-top: 25vh;
+	}
+
+	.banner {
+		background: rgba(0, 0, 0, .2);
+		padding: 40px 0;
+	}
+
+	h2 {
+		@media all and (min-width: 800px) {
+			font-size: 3em;
+		}
+
+		font-size: 2em;
+		max-width: 900px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+
+	p {
+		@media all and (min-width: 800px) {
+			font-size: 1.5em;
+		}
+
+		font-size: 1em;
+		max-width: 860px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+}
+
+.btn {
+	background: #FDA129;
+	padding: 20px 40px;
+	font-size: 1.5em;
+	font-family: idlewildMedium;
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	margin-top: 40px;
+	border-radius: 50px;
+
+	&:hover {
+		background: darken(#FDA129, 20%);
 	}
 }
