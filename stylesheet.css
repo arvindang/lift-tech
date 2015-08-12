@@ -439,12 +439,12 @@ footer {
 
 .feature {
   text-align: center;
-  padding-top: 10vh; }
+  padding-top: 10vh;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); }
   @media all and (min-width: 800px) {
     .feature {
       padding-top: 15vh; } }
   .feature .banner {
-    background: rgba(0, 0, 0, 0.2);
     padding: 40px 0; }
   .feature h2 {
     font-size: 2em;
