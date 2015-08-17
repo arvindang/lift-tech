@@ -4,7 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -357,12 +357,6 @@ td,
 th {
   padding: 0; }
 
-html {
-  box-sizing: border-box; }
-
-*, *:before, *:after {
-  box-sizing: inherit; }
-
 @font-face {
   font-family: idlewildBold;
   src: url("assets/fonts/Idlewild-Bold.otf");
@@ -384,48 +378,74 @@ html {
   src: url("assets/fonts/Idlewild-Thin.otf");
   font-weight: normal; }
 body {
-  background: url(assets/images/lift-gif-frames.gif) #000 no-repeat left center fixed;
   background-size: cover;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  font-size: 16px; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300; }
 
-video#bgvid {
-  display: none;
-  visibility: hidden; }
+h2 {
+  font-size: 2em;
+  line-height: 1.5em; }
   @media all and (min-width: 800px) {
-    video#bgvid {
-      visibility: visible;
-      display: block;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      z-index: -100;
-      -webkit-transform: translateX(-50%) translateY(-50%);
-      transform: translateX(-50%) translateY(-50%);
-      background: url(assets/images/drone-takeoff.jpg) no-repeat;
-      background-size: cover; } }
+    h2 {
+      font-size: 3em; } }
+
+p {
+  font-size: 1em;
+  line-height: 1.5em; }
+  @media all and (min-width: 800px) {
+    p {
+      font-size: 1.5em; } }
 
 header h1, .feature, footer {
   color: #fff; }
 
+.container {
+  max-width: 1140px;
+  margin: 0 auto; }
+
+.col, .bio-container .bio {
+  float: left;
+  padding-right: 20px; }
+
+.col-2-3 {
+  width: 66.66%; }
+
+.col-1-3 {
+  width: 33.33%; }
+
+.col-1-2, .bio-container .bio {
+  width: 50%; }
+
+.col-1-4 {
+  width: 25%; }
+
+.col-1-8 {
+  width: 12.5%; }
+
+/* Opt-in outside padding */
+.grid-pad {
+  padding: 0 0 0 20px; }
+  .grid-pad [class*='col-']:last-of-type {
+    padding-right: 20px; }
+
 header {
   background: rgba(0, 0, 0, 0.6);
-  padding: 10px 0 10px 20px; }
+  padding: 10px 0 10px 20px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  width: 100%; }
   header h1 {
     margin: 0;
     font-size: 1.5em; }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   background: rgba(0, 0, 0, 0.6);
   padding: 20px;
   font-size: .8em; }
@@ -437,32 +457,6 @@ footer {
     color: white;
     text-decoration: none; }
 
-.feature {
-  text-align: center;
-  padding-top: 10vh;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); }
-  @media all and (min-width: 800px) {
-    .feature {
-      padding-top: 15vh; } }
-  .feature .banner {
-    padding: 40px 0; }
-  .feature h2 {
-    font-size: 2em;
-    max-width: 900px;
-    margin: 0 auto;
-    margin-bottom: 20px; }
-    @media all and (min-width: 800px) {
-      .feature h2 {
-        font-size: 3em; } }
-  .feature p {
-    font-size: 1em;
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 0 20px; }
-    @media all and (min-width: 800px) {
-      .feature p {
-        font-size: 1.5em; } }
-
 .btn {
   background: #FDA129;
   padding: 20px 40px;
@@ -471,9 +465,100 @@ footer {
   color: white;
   text-decoration: none;
   display: inline-block;
-  margin-top: 40px;
   border-radius: 50px; }
   .btn:hover {
     background: #be6c02; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.group, .grid:after, footer:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.feature {
+  text-align: center;
+  padding-top: 10vh;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  position: relative;
+  background: url(assets/images/lift-gif-frames.gif) #000 no-repeat left center fixed;
+  background-size: cover;
+  height: 100vh; }
+  @media all and (min-width: 800px) {
+    .feature {
+      padding-top: 15vh; } }
+  .feature h2 {
+    max-width: 900px;
+    margin: 40px auto;
+    position: relative;
+    z-index: 10; }
+  .feature p {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10; }
+  .feature .btn {
+    position: relative;
+    z-index: 10;
+    margin-top: 60px; }
+
+video#bgvid {
+  display: none;
+  visibility: hidden; }
+  @media all and (min-width: 800px) {
+    video#bgvid {
+      visibility: visible;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 0;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      background: url(assets/images/drone-takeoff.jpg) no-repeat;
+      background-size: cover; } }
+
+.bio-container {
+  background: #3d3d3d;
+  color: #fff;
+  padding-bottom: 60px; }
+  .bio-container h2, .bio-container .tagline {
+    color: #fff;
+    text-align: center; }
+  .bio-container h2 {
+    margin: 0;
+    padding: 80px 10px 10px 10px; }
+  .bio-container p {
+    padding: 0 10px; }
+  .bio-container h4, .bio-container h5 {
+    margin: 0;
+    font-size: .9em; }
+  .bio-container h4 {
+    font-weight: 300; }
+  .bio-container h5 {
+    font-weight: 400; }
+  .bio-container .tagline {
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 100;
+    padding-bottom: 60px; }
+  .bio-container img {
+    display: inline-block;
+    max-width: 70%; }
+  .bio-container .bio {
+    margin-bottom: 40px;
+    text-align: center; }
+    @media all and (min-width: 600px) {
+      .bio-container .bio {
+        width: 25%; } }
 
 /*# sourceMappingURL=stylesheet.css.map */

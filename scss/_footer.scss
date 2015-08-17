@@ -1,0 +1,20 @@
+footer {
+	background: rgba(0, 0, 0, .6);
+	padding: 20px;
+	font-size: .8em;
+
+	&:after {
+		@extend .group;
+	}
+
+	.copyright {
+		float: left;
+		margin: 0;
+	}
+
+	.contact-link {
+		float: right;
+		color: white;
+		text-decoration: none;
+	}
+}
