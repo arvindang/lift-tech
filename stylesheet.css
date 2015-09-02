@@ -398,7 +398,7 @@ h1, h2, h3 {
   clear: both; }
 
 .container {
-  max-width: 800px;
+  max-width: 720px;
   margin: 0 auto; }
 
 .grid {
@@ -425,6 +425,10 @@ h1, h2, h3 {
 
 .col-1-8 {
   width: 12.5%; }
+
+@media all and (max-width: 480px) {
+  .mb-col-1-2 {
+    width: 50%; } }
 
 /* Opt-in outside padding */
 .grid-pad {
@@ -459,7 +463,7 @@ video#bgvid {
       z-index: 0;
       -webkit-transform: translateX(-50%) translateY(-50%);
       transform: translateX(-50%) translateY(-50%);
-      background: url(assets/images/drone-takeoff.jpg) no-repeat;
+      background: url(assets/images/lift-gif-frames.gif) no-repeat;
       background-size: cover; } }
 
 header {
@@ -498,9 +502,9 @@ header {
   font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 12px; }
 .main-nav li a.active {
-  border-bottom: 4px solid #fff; }
+  border-bottom: 4px solid #000; }
 .main-nav li a:hover {
-  border-bottom: 4px solid #fff; }
+  border-bottom: 4px solid #000; }
 
 footer {
   background: rgba(0, 0, 0, 0.6);
@@ -545,9 +549,12 @@ footer {
     margin-bottom: 40px; }
   .content#about #logos img {
     display: block;
-    width: 100px; }
+    max-width: 80%; }
     .content#about #logos img:focus {
       outline: none; }
+  .content#about .slick-slider {
+    max-width: 90%;
+    margin: 0 auto; }
   .content#about .slick-prev:before, .content#about .slick-next:before {
     color: #000; }
   .content#about .slick-slide:focus {
@@ -565,10 +572,10 @@ footer {
     padding: 10px;
     text-align: center; }
     .content#team .title h4 {
-      font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-      font-size: 14px; }
+      font-family: idlewildBold, "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: .6em; }
     .content#team .title h5 {
-      font-size: 12px; }
+      font-size: .7em; }
 
 html {
   box-sizing: border-box; }

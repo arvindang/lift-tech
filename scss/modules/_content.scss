@@ -44,11 +44,16 @@
 
 	#logos img {
 		display: block;
-		width: 100px;
+		max-width: 80%;
 
 		&:focus {
 			outline: none;
 		}
+	}
+
+	.slick-slider {
+		max-width: 90%;
+		margin: 0 auto;
 	}
 
 	.slick-prev:before, .slick-next:before {
@@ -80,12 +85,12 @@
 		}
 
 		h4 {
-			font-family: $title-light;
-			font-size: 14px;
+			font-family: $title-bold;
+			font-size: .6em;
 		}
 
 		h5 {
-			font-size: 12px;
+			font-size: .7em;
 		}
 	}
 }

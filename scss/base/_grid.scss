@@ -44,6 +44,12 @@ $pad: 20px;
   width: 12.5%;
 }
 
+.mb-col-1-2 {
+  @media all and (max-width: $low-tide) {
+    width: 50%;
+  }
+}
+
 /* Opt-in outside padding */
 .grid-pad {
   padding: $pad 0 $pad $pad;

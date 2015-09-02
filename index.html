@@ -71,7 +71,7 @@
 			<h2>Team</h2>
 
 			<div class="grid">
-				<div class="col col-1-2">
+				<div class="col-1-2">
 					<img src="assets/images/team/00-Bob-Clark.jpg" alt="Bob Clark">
 					<div class="title">
 						<h4>Bob Clark</h4>
@@ -79,49 +79,64 @@
 					</div>
 				</div>
 
-				<div class="col col-1-2">
+				<div class="col-1-2">
 					<img src="assets/images/team/01-Russ-Burns.jpg" alt="Russ Burns">
-					<h4>Russ Burns</h4>
-					<h5>President</h5>
+					<div class="title">
+						<h4>Russ Burns</h4>
+						<h5>President</h5>
+					</div>
 				</div>
 			</div> <!-- grid -->
 
-				<div class="bio">
+			<div class="grid">
+				<div class="col-1-2">
 					<img src="assets/images/team/02-Michael-Latiner.jpg" alt="Michael Latiner">
-					<h4>Michael Latiner</h4>
-					<h5>Vice President, Strategy</h5>
+					<div class="title">
+						<h4>Michael Latiner</h4>
+						<h5>Vice President, Strategy</h5>
+					</div>
 				</div>
 
-				<div class="bio">
+				<div class="col-1-2">
 					<img src="assets/images/team/03-Carmen-Lonstein.jpg" alt="Carmen Lonstein">
-					<h4>Carmen Lonstein</h4>
-					<h5>Vice President, Legal &amp; Policy</h5>
+					<div class="title">
+						<h4>Carmen Lonstein</h4>
+						<h5>Vice President, Legal &amp; Policy</h5>
+					</div>
 				</div>
 			</div> <!-- grid -->
 
-			<div class="grid grid-pad">
-				<div class="bio">
+			<div class="grid">
+				<div class="col-1-3 mb-col-1-2">
 					<img src="assets/images/team/04-Shanon-Marks.jpg" alt="Shanon Marks">
-					<h4>Shanon Marks</h4>
-					<h5>Vice President, Innovation</h5>
+					<div class="title">
+						<h4>Shanon Marks</h4>
+						<h5>Vice President, Innovation</h5>
+					</div>
 				</div>
 
-				<div class="bio">
+				<div class="col-1-3 mb-col-1-2">
 					<img src="assets/images/team/05-Tomislav-Zigo.jpg" alt="Tomislav Zigo">
-					<h4>Tomislav Zigo</h4>
-					<h5>Vice President, Technology</h5>
+					<div class="title">
+						<h4>Tomislav Zigo</h4>
+						<h5>Vice President, Technology</h5>
+					</div>
 				</div>
 
-				<div class="bio">
+				<div class="col-1-3 mb-col-1-2">
 					<img src="assets/images/team/06-Scott-Lumsden.jpg" alt="Scott Lumsden">
-					<h4>Scott Lumsden</h4>
-					<h5>Vice President, Technical Assurance</h5>
+					<div class="title">
+						<h4>Scott Lumsden</h4>
+						<h5>Vice President, Technical Assurance</h5>
+					</div>
 				</div>
 
-				<div class="bio">
+				<div class="col-1-3 mb-col-1-2">
 					<img src="assets/images/team/07-Shawn-Clark.jpg" alt="Shawn Clark">
-					<h4>Shawn Clark</h4>
-					<h5>Vice President, Project Management</h5>
+					<div class="title">
+						<h4>Shawn Clark</h4>
+						<h5>Vice President, Project Management</h5>
+					</div>
 				</div>
 			</div> <!-- grid -->
 
@@ -143,7 +158,23 @@
 		  slidesToShow: 4,
 		  slidesToScroll: 3,
 		  arrows: true,
-		  centerPadding: '60px'
+		  centerPadding: '60px',
+		  responsive: [
+		      {
+		        breakpoint: 600,
+		        settings: {
+		          slidesToShow: 3,
+		          slidesToScroll: 3
+		        }
+		      },
+		      {
+		        breakpoint: 460,
+		        settings: {
+		          slidesToShow: 2,
+		          slidesToScroll: 2
+		        }
+		      }
+		    ]
 		});
 	</script>
 
