@@ -1,109 +1,12 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
-.glide {
-  position: relative;
-  width: 100%;
-  height: 100%; }
-  .glide__wrapper {
-    overflow: hidden; }
-  .glide__track {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    list-style: none;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    touch-action: pan-Y; }
-    .glide__track.dragging {
-      cursor: grabbing;
-      user-select: none; }
-  .glide__slide {
-    width: 100%;
-    user-select: none;
-    -webkit-touch-callout: none;
-    -webkit-tap-highlight-color: transparent; }
-  .glide__arrows {
-    -webkit-touch-callout: none;
-    user-select: none; }
-  .glide__arrow {
-    cursor: pointer; }
-  .glide__bullets {
-    -webkit-touch-callout: none;
-    user-select: none; }
-    .glide__bullets li {
-      cursor: pointer; }
-  .glide--slider .glide__slide {
-    float: left;
-    clear: none; }
-  .glide--carousel .glide__slide {
-    float: left;
-    clear: none; }
-  .glide--slideshow .glide__wrapper {
-    height: 100%; }
-  .glide--slideshow .glide__slide {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    -webkit-transform-style: preserve-3d;
-    -webkit-transform: translate3d(0px, 0px, 0px); }
-    .glide--slideshow .glide__slide.active {
-      z-index: 1; }
-
-.glide__arrows {
-  position: absolute;
-  top: 50%;
-  width: 92%;
-  margin-left: 4%; }
-.glide__arrow {
-  position: absolute;
-  z-index: 2;
-  transform: translateY(-50%);
-  color: white;
-  text-transform: uppercase;
-  font: 11px Arial, sans-serif;
-  padding: 9px 12px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 4px;
-  transition: all 300ms ease-in-out; }
-  .glide__arrow:hover {
-    border-color: white; }
-  .glide__arrow.prev {
-    left: 0; }
-  .glide__arrow.next {
-    right: 0; }
-.glide__bullets {
-  position: absolute;
-  bottom: 8%;
-  width: 100%;
-  text-align: center;
-  list-style: none; }
-  .glide__bullets li {
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 12px;
-    height: 12px;
-    margin: 0 5px;
-    cursor: pointer;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    transition: all 300ms ease-in-out; }
-    .glide__bullets li:hover {
-      border: 2px solid white; }
-    .glide__bullets li.active {
-      background-color: white; }
-.glide--slider .glide__arrow {
-  opacity: 1;
-  transition: visibility 0 ease 150ms, opacity 150ms ease; }
-  .glide--slider .glide__arrow.disabled {
-    opacity: 0.5; }
-
+@import "http://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css";
+@import "http://cdn.jsdelivr.net/jquery.slick/1.5.8/slick-theme.css";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -495,10 +398,16 @@ h1, h2, h3 {
   clear: both; }
 
 .container {
-  max-width: 960px;
+  max-width: 800px;
   margin: 0 auto; }
 
-.col {
+.grid {
+  background: white;
+  margin: 0 0 20px 0; }
+  .grid:after {
+    content: ""; }
+
+[class*='col-'] {
   float: left;
   padding-right: 20px; }
 
@@ -519,7 +428,7 @@ h1, h2, h3 {
 
 /* Opt-in outside padding */
 .grid-pad {
-  padding: 0 0 0 20px; }
+  padding: 20px 0 20px 20px; }
   .grid-pad [class*='col-']:last-of-type {
     padding-right: 20px; }
 
@@ -554,7 +463,7 @@ video#bgvid {
       background-size: cover; } }
 
 header {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.6);
   position: fixed;
   z-index: 100;
   top: 0;
@@ -565,7 +474,7 @@ header {
     margin: 0;
     font-size: 1.5em;
     float: left;
-    color: #fff;
+    color: #000;
     font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     padding-top: 18px; }
   header nav {
@@ -580,7 +489,7 @@ header {
   padding: 0; }
 .main-nav li a {
   display: inline-block;
-  color: white;
+  color: #000;
   text-decoration: none;
   border-bottom: 4px solid transparent;
   padding-top: 20px;
@@ -630,11 +539,36 @@ footer {
   padding-right: 20px;
   padding-left: 20px;
   padding-top: 80px; }
+  .content#about .about-us {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 40px; }
+  .content#about #logos img {
+    display: block;
+    width: 100px; }
+    .content#about #logos img:focus {
+      outline: none; }
+  .content#about .slick-prev:before, .content#about .slick-next:before {
+    color: #000; }
+  .content#about .slick-slide:focus {
+    outline: none; }
 
 .content#team {
   padding-right: 20px;
   padding-left: 20px;
-  padding-top: 80px; }
+  padding-top: 20px; }
+  .content#team img {
+    max-width: 100%;
+    display: block; }
+  .content#team .title {
+    border: 1px solid #eee;
+    padding: 10px;
+    text-align: center; }
+    .content#team .title h4 {
+      font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: 14px; }
+    .content#team .title h5 {
+      font-size: 12px; }
 
 html {
   box-sizing: border-box; }
@@ -645,7 +579,7 @@ html {
 .hide {
   display: none; }
 
-.main-nav ul, .content#home h1, .content#home h2, .content#home h3 {
+.main-nav ul, .content#home h1, .content#home h2, .content#home h3, .content#team .title h4, .content#team .title h5 {
   margin: 0; }
 
 /*# sourceMappingURL=stylesheet.css.map */

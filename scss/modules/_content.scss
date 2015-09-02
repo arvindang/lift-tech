@@ -35,10 +35,57 @@
 	padding-right: $pad;
 	padding-left: $pad;
 	padding-top: $pad * 4;
+
+	.about-us {
+		padding-bottom: $pad * 2;
+		border-bottom: 1px solid #eee;
+		margin-bottom: $pad * 2;
+	}
+
+	#logos img {
+		display: block;
+		width: 100px;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.slick-prev:before, .slick-next:before {
+		color: #000;
+	}
+
+	.slick-slide:focus {
+		outline: none;
+	}
 }
 
 .content#team {
 	padding-right: $pad;
 	padding-left: $pad;
-	padding-top: $pad * 4;
+	padding-top: $pad;
+
+	img {
+		max-width: 100%;
+		display: block;
+	}
+
+	.title {
+		border: 1px solid #eee;
+		padding: 10px;
+		text-align: center;
+
+		h4, h5 {
+			@extend %reset;
+		}
+
+		h4 {
+			font-family: $title-light;
+			font-size: 14px;
+		}
+
+		h5 {
+			font-size: 12px;
+		}
+	}
 }
