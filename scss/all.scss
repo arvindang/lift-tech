@@ -1,13 +1,16 @@
 // RESETS
 
-@import 'normalize';
-@import 'typography';
-@import 'grid';
+@import 'base/normalize';
+@import 'base/variables';
+@import 'base/typography';
+@import 'base/grid';
 
-@import 'header';
-@import 'footer';
+@import 'components/btn';
 
-@import 'components';
+@import 'modules/header';
+@import 'modules/nav';
+@import 'modules/footer';
+@import 'modules/content';
 
 html {
   box-sizing: border-box;
@@ -16,122 +19,10 @@ html {
   box-sizing: inherit;
 }
 
-.group {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.feature {
-	text-align: center;
-	padding-top: 10vh;
-	text-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
-	position: relative;
-	background: url(assets/images/lift-gif-frames.gif) #000 no-repeat left center fixed;
-	background-size: cover;
-	height: 100vh;
-
-	@media all and (min-width: 800px) {
-		padding-top: 15vh;
-	}
-
-	h2 {
-		max-width: 900px;
-		margin: 40px auto;
-		position: relative;
-		z-index: 10;
-	}
-
-	p {
-		max-width: 860px;
-		margin: 0 auto;
-		padding: 0 20px;
-		position: relative;
-		z-index: 10;
-	}
-
-	.btn {
-		position: relative;
-		z-index: 10;
-		margin-top: 60px;
-	}
-}
-
-video#bgvid {
+.hide {
 	display: none;
-	visibility: hidden;
-
-	@media all and (min-width: 800px) {
-		visibility: visible;
-		display: block;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		min-width: 100%;
-		min-height: 100%;
-		width: auto;
-		height: auto;
-		z-index: 0;
-		-webkit-transform: translateX(-50%) translateY(-50%);
-		transform: translateX(-50%) translateY(-50%);
-		background: url(assets/images/drone-takeoff.jpg) no-repeat;
-		background-size: cover;
-	}
 }
 
-.bio-container {
-	background: #3d3d3d;
-	color: #fff;
-	padding-bottom: 60px;
-
-	h2, .tagline {
-		color: #fff;
-		text-align: center;
-	}
-
-	h2 {
-		margin: 0;
-		padding: 80px 10px 10px 10px;
-	}
-
-	p {
-		padding: 0 10px;
-	}
-
-	h4, h5 {
-		margin: 0;
-		font-size: .9em;
-	}
-
-	h4 {
-		font-weight: 300;
-	}
-
-	h5 {
-		font-weight: 400;
-	}
-
-	.tagline {
-		max-width: 800px;
-		margin: 0 auto;
-		font-weight: 100;
-		padding-bottom: 60px;
-	}
-
-	img {
-		display: inline-block;
-		max-width: 70%;
-	}
-
-	.bio {
-		@extend .col;
-		@extend .col-1-2;
-		margin-bottom: 40px;
-		text-align: center;
-
-		@media all and (min-width: 600px) {
-			width: 25%;
-		}
-	}
-
+%reset {
+	margin: 0;
 }

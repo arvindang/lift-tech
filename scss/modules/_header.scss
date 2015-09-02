@@ -1,0 +1,26 @@
+header {
+	background: rgba(255, 255, 255, .6);
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	width: 100%;
+	padding-left: $pad;
+	padding-right: $pad;
+
+	h1 {
+		margin: 0;
+		font-size: 1.5em;
+		float: left;
+		color: #fff;
+		font-family: $title-light;
+		padding-top: 18px;
+	}
+
+	nav {
+		float: right;
+	}
+
+	&:after {
+		@extend .group;
+	}
+}

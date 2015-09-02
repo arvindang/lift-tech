@@ -32,39 +32,22 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 
-// AUTHOR STYLES
+html {
+	// -webkit-font-smoothing: antialiased;
+}
 
 body {
-	background-size: cover;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $body-regular;
 	font-weight: 300;
 	line-height: 1.5em;
-	font-size: 16px;
+	font-size: 14px;
+
+	@media all and (min-width: $low-tide) {
+		font-size: 16px;
+	}
 }
 
 h1, h2, h3 {
-	font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: $title-bold;
 	font-weight: 300;
-}
-
-h2 {
-	@media all and (min-width: 800px) {
-		font-size: 3em;
-	}
-
-	font-size: 2em;
-	line-height: 1.5em;
-}
-
-p {
-	@media all and (min-width: 800px) {
-		font-size: 1.5em;
-	}
-
-	font-size: 1em;
-	line-height: 1.5em;
-}
-
-header h1, .feature, footer {
-	color: #fff;
 }
