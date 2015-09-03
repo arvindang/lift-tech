@@ -606,21 +606,65 @@ footer {
       margin-top: 20px; } }
 
 .content#services {
-  padding-right: 20px;
-  padding-left: 20px;
   padding-top: 80px;
   padding-bottom: 80px; }
+  .content#services .container {
+    padding-right: 20px;
+    padding-left: 20px; }
+  .content#services h2 {
+    margin-bottom: 40px; }
+  .content#services .service-blocks {
+    text-align: center;
+    font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+    @media screen and (min-width: 720px) {
+      .content#services .service-blocks {
+        font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; } }
+  .content#services .grid {
+    display: table;
+    border-collapse: collapse;
+    padding: 0;
+    width: 100%; }
+  .content#services .box {
+    display: table-cell;
+    vertical-align: middle;
+    height: 140px;
+    font-size: 14px;
+    padding: 0 10px; }
+  .content#services .box-1-3 {
+    width: 33.33333%; }
+  .content#services .box-1-2 {
+    width: 50%; }
+  .content#services .box-dk {
+    background: #858996; }
+  .content#services .box-md {
+    background: #9296A3; }
+  .content#services .box-lt {
+    background: #AEB4BF; }
 
-#service-slider img {
-  width: 100%; }
-#service-slider .slick-prev:before, #service-slider .slick-next:before {
-  color: #000;
-  z-index: 10; }
-#service-slider .slick-next {
-  right: 15px; }
-#service-slider .slick-prev {
-  left: 15px;
-  z-index: 10; }
+#service-slider {
+  margin-top: 80px;
+  margin-bottom: 0; }
+  #service-slider img {
+    width: 100%; }
+  #service-slider .slick-prev:before, #service-slider .slick-next:before {
+    color: #000;
+    z-index: 10; }
+  #service-slider .slick-next {
+    right: 15px; }
+  #service-slider .slick-prev {
+    left: 15px;
+    z-index: 10; }
+  #service-slider .clip {
+    position: relative; }
+  #service-slider .title {
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    color: #fff;
+    width: 100%;
+    font-family: idlewildMedium, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 1.25em;
+    line-height: 1.5em; }
 
 html {
   box-sizing: border-box; }
@@ -631,7 +675,7 @@ html {
 .hide {
   display: none; }
 
-.main-nav ul, .content#home h1, .content#home h2, .content#home h3, .content#team .title h4, .content#team .title h5 {
+.main-nav ul, .content#home h1, .content#home h2, .content#home h3, .content#team .title h4, .content#team .title h5, .content#services .grid {
   margin: 0; }
 
 /*# sourceMappingURL=stylesheet.css.map */
