@@ -512,27 +512,37 @@ header {
   header nav {
     float: right; }
 
-.main-nav ul {
-  list-style: none;
-  padding: 0; }
-.main-nav li {
-  text-align: center;
-  display: inline-block;
-  padding: 0; }
-.main-nav li a {
-  display: inline-block;
-  color: #000;
-  text-decoration: none;
-  border-bottom: 4px solid transparent;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-left: 20px;
-  font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 12px; }
-.main-nav li a.active {
-  border-bottom: 4px solid #000; }
-.main-nav li a:hover {
-  border-bottom: 4px solid #000; }
+.main-nav {
+  display: none; }
+  @media screen and (min-width: 720px) {
+    .main-nav {
+      display: block; }
+      .main-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0; }
+      .main-nav li {
+        text-align: center;
+        display: inline-block;
+        padding: 0; }
+      .main-nav li a {
+        display: inline-block;
+        color: #000;
+        text-decoration: none;
+        border-bottom: 4px solid transparent;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 20px;
+        font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-size: 12px; }
+      .main-nav li a.active {
+        border-bottom: 4px solid #000; }
+      .main-nav li a:hover {
+        border-bottom: 4px solid #000; } }
+
+@media screen and (min-width: 720px) {
+  .mobile-nav {
+    display: none; } }
 
 footer {
   background: rgba(0, 0, 0, 0.6);
@@ -737,7 +747,7 @@ html {
 .hide {
   display: none; }
 
-.main-nav ul, #home h1, #home h2, #home h3, #team .title h4, #team .title h5, #services .grid {
+#home h1, #home h2, #home h3, #team .title h4, #team .title h5, #services .grid {
   margin: 0; }
 
 /*# sourceMappingURL=stylesheet.css.map */
