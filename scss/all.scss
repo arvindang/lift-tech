@@ -4,18 +4,26 @@
 @import 'http://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css';
 @import 'http://cdn.jsdelivr.net/jquery.slick/1.5.8/slick-theme.css';
 
+@import 'components/btn';
+@import 'components/video-bg';
+
 @import 'base/normalize';
 @import 'base/variables';
 @import 'base/typography';
 @import 'base/grid';
+@import 'base/forms';
 
-@import 'components/btn';
-@import 'components/video-bg';
 
 @import 'modules/header';
 @import 'modules/nav';
 @import 'modules/footer';
 @import 'modules/content';
+
+@import 'modules/home';
+@import 'modules/about';
+@import 'modules/team';
+@import 'modules/services';
+@import 'modules/careers';
 
 html {
   box-sizing: border-box;

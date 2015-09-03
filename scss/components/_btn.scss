@@ -1,12 +1,27 @@
-.btn {
-	background: $accent;
-	padding: 10px 40px;
-	font-family: $title-light;
-	color: white;
+// .btn {
+// 	background: $accent;
+// 	padding: 10px 40px;
+// 	font-family: $title-light;
+// 	color: white;
+// 	text-decoration: none;
+// 	display: inline-block;
+
+// 	&:hover {
+// 		background: darken(#FDA129, 20%);
+// 	}
+// }
+
+@mixin btn($color: $accent) {
+	border: 1px solid $color;
+	background: transparent;
+	color: $color;
 	text-decoration: none;
+	font-family: $title-light;
+	padding: 10px 40px;
 	display: inline-block;
 
 	&:hover {
-		background: darken(#FDA129, 20%);
+		background: $color;
+		color: #fff;
 	}
 }

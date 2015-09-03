@@ -1,0 +1,24 @@
+form.default {
+	color: #8A8A8A;
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.req {
+		color: red;
+	}
+
+	input[type=text] + label, input[type=email] + label, input[type=tel] + label {
+		display: block;
+	}
+
+	input[type=text] {
+		border: 1px solid #C2C2C2;
+	}
+
+	input[type=submit] {
+		@include btn();
+	}
+}
