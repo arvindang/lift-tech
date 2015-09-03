@@ -48,19 +48,22 @@
 					<img src="assets/images/logos/clayco.png">
 				</div>
 				<div>
+					<img src="assets/images/logos/forum.png">
+				</div>
+				<div>
 					<img src="assets/images/logos/concrete.png">
 				</div>
 				<div>
-					<img src="assets/images/logos/forum.png">
-				</div>
-				<div>
 					<img src="assets/images/logos/ventana.png">
 				</div>
 				<div>
-					<img src="assets/images/logos/forum.png">
+					<img src="assets/images/logos/clayco-realty.png">
 				</div>
 				<div>
-					<img src="assets/images/logos/ventana.png">
+					<img src="assets/images/logos/clayco-insurance.png">
+				</div>
+				<div>
+					<img src="assets/images/logos/technical-assurance.png">
 				</div>
 			</div> <!-- logos -->
 		</div> <!-- container -->
@@ -98,16 +101,16 @@
 				</div>
 
 				<div class="col-1-2">
-					<img src="assets/images/team/03-Carmen-Lonstein.jpg" alt="Carmen Lonstein">
+					<img src="assets/images/team/08_ Andrew-Dennison.png" alt="Andrew Dennison">
 					<div class="title">
-						<h4>Carmen Lonstein</h4>
-						<h5>Vice President, Legal &amp; Policy</h5>
+						<h4>Andrew Dennison</h4>
+						<h5>COO</h5>
 					</div>
 				</div>
 			</div> <!-- grid -->
 
 			<div class="grid">
-				<div class="col-1-3 mb-col-1-2">
+				<div class="col-1-3 col-mb-1-2">
 					<img src="assets/images/team/04-Shanon-Marks.jpg" alt="Shanon Marks">
 					<div class="title">
 						<h4>Shanon Marks</h4>
@@ -115,7 +118,15 @@
 					</div>
 				</div>
 
-				<div class="col-1-3 mb-col-1-2">
+				<div class="col-1-3 col-mb-1-2">
+					<img src="assets/images/team/03-Carmen-Lonstein.jpg" alt="Carmen Lonstein">
+					<div class="title">
+						<h4>Carmen Lonstein</h4>
+						<h5>Vice President, Legal &amp; Policy</h5>
+					</div>
+				</div>
+
+				<div class="col-1-3 col-mb-1-2">
 					<img src="assets/images/team/05-Tomislav-Zigo.jpg" alt="Tomislav Zigo">
 					<div class="title">
 						<h4>Tomislav Zigo</h4>
@@ -123,7 +134,7 @@
 					</div>
 				</div>
 
-				<div class="col-1-3 mb-col-1-2">
+				<div class="col-1-3 col-mb-1-2">
 					<img src="assets/images/team/06-Scott-Lumsden.jpg" alt="Scott Lumsden">
 					<div class="title">
 						<h4>Scott Lumsden</h4>
@@ -131,7 +142,7 @@
 					</div>
 				</div>
 
-				<div class="col-1-3 mb-col-1-2">
+				<div class="col-1-3 col-mb-1-2">
 					<img src="assets/images/team/07-Shawn-Clark.jpg" alt="Shawn Clark">
 					<div class="title">
 						<h4>Shawn Clark</h4>
@@ -142,6 +153,40 @@
 
 		</div> <!-- container -->
 	</section>
+
+	<section class="content" id="services">
+		<div class="container">
+			<h2>Services</h2>
+			<p>Lift helps you determine where and how to apply UAV technology, navigating the regulatory and legal environment allowing companies to impliment UAV tech in their core business. We apply our expertise in AEC to the practical needs of pillar industries through a low-cost, reliable aerial platform. Planes, satellite technology and helicopters are costly platforms, subject to weather, timing and availability. Our approach helps you see beyond the horizon, preparing your business for what comes next.</p>
+		</div>
+	</section>
+
+	<div id="service-slider" class="">
+		<div>
+			<img src="https://unsplash.it/720/480">
+		</div>
+		<div>
+			<img src="https://unsplash.it/720/480">
+		</div>
+		<div>
+			<img src="https://unsplash.it/720/480">
+		</div>
+		<div>
+			<img src="https://unsplash.it/720/480">
+		</div>
+		<div>
+			<img src="https://unsplash.it/720/480">
+		</div>
+		<div>
+			<img src="https://unsplash.it/720/480">
+		</div>
+		<div>
+			<img src="https://unsplash.it/720/480">
+		</div>
+		<div>
+			<img src="https://unsplash.it/720/480">
+		</div>
+	</div>
 
 	<footer>
 		<p class="copyright">Copyright Lift, 2015</p>
@@ -172,6 +217,38 @@
 		        settings: {
 		          slidesToShow: 2,
 		          slidesToScroll: 2
+		        }
+		      }
+		    ]
+		});
+
+		$('#service-slider').slick({
+		  slidesToShow: 3,
+		  slidesToScroll: 1,
+		  autoplay: true,
+		  autoplaySpeed: 3000,
+		  centerMode: true,
+		  centerPadding: '60px',
+		  responsive: [
+		      {
+		        breakpoint: 2160,
+		        settings: {
+		          slidesToShow: 3,
+		          centerMode: true
+		        }
+		      },
+		      {
+		        breakpoint: 1440,
+		        settings: {
+		          slidesToShow: 2,
+		          centerMode: false
+		        }
+		      },
+		      {
+		        breakpoint: 1080,
+		        settings: {
+		          slidesToShow: 1,
+		          centerMode: true
 		        }
 		      }
 		    ]

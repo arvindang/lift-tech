@@ -392,7 +392,7 @@ h1, h2, h3 {
   font-family: idlewildBold, "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300; }
 
-.group, .grid:after, header:after, footer:after {
+.group, .grid:after, header:after, footer:after, .content#team:after {
   content: "";
   display: table;
   clear: both; }
@@ -427,7 +427,7 @@ h1, h2, h3 {
   width: 12.5%; }
 
 @media all and (max-width: 480px) {
-  .mb-col-1-2 {
+  .col-mb-1-2 {
     width: 50%; } }
 
 /* Opt-in outside padding */
@@ -543,6 +543,8 @@ footer {
   padding-right: 20px;
   padding-left: 20px;
   padding-top: 80px; }
+  .content#about h2 {
+    margin-bottom: 40px; }
   .content#about .about-us {
     padding-bottom: 40px;
     border-bottom: 1px solid #eee;
@@ -561,21 +563,64 @@ footer {
     outline: none; }
 
 .content#team {
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-top: 20px; }
+  padding-top: 80px;
+  position: relative; }
+  .content#team:after {
+    content: '';
+    background: url(https://unsplash.it/1440/960) no-repeat center center/cover;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    height: 890px; }
+  .content#team .container {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 40px;
+    position: relative;
+    z-index: 10; }
+  .content#team h2 {
+    margin-bottom: 40px; }
   .content#team img {
     max-width: 100%;
     display: block; }
+  .content#team .grid {
+    background: transparent; }
+    @media screen and (min-width: 480px) {
+      .content#team .grid {
+        margin-bottom: 40px; } }
   .content#team .title {
     border: 1px solid #eee;
     padding: 10px;
-    text-align: center; }
+    text-align: center;
+    background: #fff; }
     .content#team .title h4 {
       font-family: idlewildBold, "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
       font-size: .6em; }
     .content#team .title h5 {
       font-size: .7em; }
+  .content#team .col-1-3:nth-child(4), .content#team .col-1-3:nth-child(5) {
+    margin-top: 20px; }
+  @media screen and (max-width: 480px) {
+    .content#team .col-mb-1-2:nth-child(3) {
+      margin-top: 20px; } }
+
+.content#services {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px; }
+
+#service-slider img {
+  width: 100%; }
+#service-slider .slick-prev:before, #service-slider .slick-next:before {
+  color: #000;
+  z-index: 10; }
+#service-slider .slick-next {
+  right: 15px; }
+#service-slider .slick-prev {
+  left: 15px;
+  z-index: 10; }
 
 html {
   box-sizing: border-box; }
