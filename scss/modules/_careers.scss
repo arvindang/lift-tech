@@ -1,5 +1,25 @@
 #careers {
+	padding-bottom: $pad * 4;
+	padding-left: $pad;
+	padding-right: $pad;
+
 	h3 {
 		font-family: $title-light;
+	}
+
+	legend {
+		margin-top: $pad;
+
+		@media screen and (min-width: 560px) {
+			margin-top: 0;
+		}
+	}
+
+	#title5 {
+		margin-top: $pad;
+	}
+
+	#Field5_1 {
+		margin-left: $pad;
 	}
 }

@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width">
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="js/wufoo.js"></script>
+	<script type="text/javascript" src="assets/js/wufoo.js"></script>
 </head>
 <body>
 	<header>
@@ -216,8 +216,9 @@
 			<h3>Lift now hiring drone operators.</h3>
 			<form id="form3" name="form3" class="wufoo topLabel page default" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
 			      action="https://mudai.wufoo.com/forms/q1b66huo09jc0cs/#public">
-				<ul>
 
+			    <div class="group">
+				<ul class="col-1-2 col-mb-1">
 					<li id="foli1" class="notranslate      ">
 					<label class="desc" id="title1" for="Field1">
 					Name
@@ -259,7 +260,6 @@
 					<span id="req_4" class="req">*</span>
 					</label>
 					<div>
-
 					<select id="Field4" name="Field4" class="field select medium"       tabindex="6" >
 					<option value="" selected="selected">
 					</option>
@@ -416,7 +416,8 @@
 					</select>
 
 					</div>
-					</li><li id="foli5" class="notranslate      ">
+					</li>
+					<li id="foli5" class="notranslate      ">
 
 					<![if !IE | (gte IE 8)]>
 					<legend id="title5" class="desc">
@@ -444,6 +445,10 @@
 					</span>
 					</div>
 					</li>
+					</ul>
+
+
+					<ul class="col-1-2 col-mb-1">
 					<li id="foli6" class="notranslate  twoColumns     ">
 					<![if !IE | (gte IE 8)]>
 					<legend id="title6" class="desc">
@@ -456,34 +461,47 @@
 					</label>
 					<![endif]-->
 					<div>
-					<span>
-					<input id="Field6" name="Field6" type="checkbox" class="field checkbox" value="Surveying" tabindex="9"     />
-					<label class="choice" for="Field6">Surveying</label>
-					</span>
-					<span>
-					<input id="Field7" name="Field7" type="checkbox" class="field checkbox" value="Utility Inspection" tabindex="10"     />
-					<label class="choice" for="Field7">Utility Inspection</label>
-					</span>
-					<span>
-					<input id="Field8" name="Field8" type="checkbox" class="field checkbox" value="Film and TV" tabindex="11"     />
-					<label class="choice" for="Field8">Film and TV</label>
-					</span>
-					<span>
-					<input id="Field9" name="Field9" type="checkbox" class="field checkbox" value="Mining" tabindex="12"     />
-					<label class="choice" for="Field9">Mining</label>
-					</span>
-					<span>
-					<input id="Field10" name="Field10" type="checkbox" class="field checkbox" value="Real Estate" tabindex="13"     />
-					<label class="choice" for="Field10">Real Estate</label>
-					</span>
-					<span>
-					<input id="Field11" name="Field11" type="checkbox" class="field checkbox" value="Construction" tabindex="14"     />
-					<label class="choice" for="Field11">Construction</label>
-					</span>
-					<span>
-					<input id="Field12" name="Field12" type="checkbox" class="field checkbox" value="Infrastructure Inspection" tabindex="15"     />
-					<label class="choice" for="Field12">Infrastructure Inspection</label>
-					</span>
+
+					<div class="col-1-2 checkbox">
+						<span>
+						<input id="Field6" name="Field6" type="checkbox" class="field checkbox" value="Surveying" tabindex="9"     />
+						<label class="choice" for="Field6">Surveying</label>
+						</span>
+
+						<span>
+						<input id="Field7" name="Field7" type="checkbox" class="field checkbox" value="Utility Inspection" tabindex="10"     />
+						<label class="choice" for="Field7">Utility Inspection</label>
+						</span>
+
+						<span>
+						<input id="Field8" name="Field8" type="checkbox" class="field checkbox" value="Film and TV" tabindex="11"     />
+						<label class="choice" for="Field8">Film and TV</label>
+						</span>
+					</div>
+
+
+					<div class="col-1-2 checkbox">
+						<span>
+						<input id="Field9" name="Field9" type="checkbox" class="field checkbox" value="Mining" tabindex="12"     />
+						<label class="choice" for="Field9">Mining</label>
+						</span>
+
+						<span>
+						<input id="Field10" name="Field10" type="checkbox" class="field checkbox" value="Real Estate" tabindex="13"     />
+						<label class="choice" for="Field10">Real Estate</label>
+						</span>
+
+						<span>
+						<input id="Field11" name="Field11" type="checkbox" class="field checkbox" value="Construction" tabindex="14"     />
+						<label class="choice" for="Field11">Construction</label>
+						</span>
+
+						<span>
+						<input id="Field12" name="Field12" type="checkbox" class="field checkbox" value="Infrastructure Inspection" tabindex="15"     />
+						<label class="choice" for="Field12">Infrastructure Inspection</label>
+						</span>
+					</div>
+
 					</div>
 					</li>
 					<li id="foli106" class="notranslate      ">
@@ -493,12 +511,12 @@
 					<div>
 					<input id="Field106" name="Field106" type="text" class="field text medium" value="" maxlength="255" tabindex="16" onkeyup=""       />
 					</div>
-					</li> <li class="buttons ">
+<!-- 					</li> <li class="buttons ">
 					<div>
 					    <input id="saveForm" name="saveForm" class="btn btTxt submit"
 					    type="submit" value="Submit"
 					 /></div>
-					</li>
+					</li> -->
 
 					<li class="hide">
 					<label for="comment">Do Not Fill This Out</label>
@@ -506,10 +524,19 @@
 					<input type="hidden" id="idstamp" name="idstamp" value="S+lvtcmJNkDHMXmQNuP1ZXbwVVFfkvdlj4LXPdgaHEU=" />
 					</li>
 				</ul>
+				</div> <!-- group -->
+
+				<div>
+				    <input id="saveForm" name="saveForm" class="btn btTxt submit"
+				    type="submit" value="Submit"
+				 /></div>
 			</form>
 		</div>
 	</section>
 
+	<section id="contact">
+
+	</section>
 
 	<footer>
 		<p class="copyright">Copyright Lift, 2015</p>

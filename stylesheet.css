@@ -18,7 +18,7 @@ video#bgvid {
       z-index: 0;
       -webkit-transform: translateX(-50%) translateY(-50%);
       transform: translateX(-50%) translateY(-50%);
-      background: url(assets/images/lift-gif-frames.gif) no-repeat;
+      background: url(assets/images/background/lift-gif-frames.gif) no-repeat;
       background-size: cover; } }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -412,7 +412,7 @@ h1, h2, h3 {
   font-family: idlewildBold, "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300; }
 
-.group, .grid:after, header:after, footer:after, #team:after {
+.group, .grid:after, form.default:after, header:after, footer:after, #team:after {
   content: "";
   display: table;
   clear: both; }
@@ -450,6 +450,12 @@ h1, h2, h3 {
   .col-mb-1-2 {
     width: 50%; } }
 
+@media all and (max-width: 560px) {
+  .col-mb-1 {
+    float: none;
+    display: block;
+    width: 100%; } }
+
 /* Opt-in outside padding */
 .grid-pad {
   padding: 20px 0 20px 20px; }
@@ -461,12 +467,18 @@ form.default {
   form.default ul {
     list-style: none;
     padding: 0; }
+  form.default label, form.default legend {
+    font-size: 12px; }
   form.default .req {
     color: red; }
   form.default input[type=text] + label, form.default input[type=email] + label, form.default input[type=tel] + label {
     display: block; }
-  form.default input[type=text] {
-    border: 1px solid #C2C2C2; }
+  form.default input[type=text], form.default input[type=email], form.default input[type=tel] {
+    border: 1px solid #C2C2C2;
+    margin-bottom: 20px;
+    display: inline-block; }
+  form.default input[type=radio] {
+    display: inline-block; }
   form.default input[type=submit] {
     border: 1px solid #F3933E;
     background: transparent;
@@ -474,10 +486,13 @@ form.default {
     text-decoration: none;
     font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     padding: 10px 40px;
-    display: inline-block; }
+    display: inline-block;
+    font-size: 12px; }
     form.default input[type=submit]:hover {
       background: #F3933E;
       color: #fff; }
+  form.default .checkbox span {
+    display: block; }
 
 header {
   background: rgba(255, 255, 255, 0.6);
@@ -531,6 +546,8 @@ footer {
     color: white;
     text-decoration: none; }
 
+.content h2 {
+  margin-top: 0; }
 .content p:last-of-type {
   margin-bottom: 0; }
 
@@ -559,6 +576,7 @@ footer {
     font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     padding: 10px 40px;
     display: inline-block;
+    font-size: 12px;
     text-shadow: none;
     margin-top: 40px; }
     #home .btn:hover {
@@ -694,8 +712,21 @@ footer {
     font-size: 1.25em;
     line-height: 1.5em; }
 
-#careers h3 {
-  font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+#careers {
+  padding-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px; }
+  #careers h3 {
+    font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  #careers legend {
+    margin-top: 20px; }
+    @media screen and (min-width: 560px) {
+      #careers legend {
+        margin-top: 0; } }
+  #careers #title5 {
+    margin-top: 20px; }
+  #careers #Field5_1 {
+    margin-left: 20px; }
 
 html {
   box-sizing: border-box; }
