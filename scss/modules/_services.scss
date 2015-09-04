@@ -36,6 +36,7 @@
 		height: 140px;
 		font-size: 14px;
 		padding: 0 10px;
+
 	}
 
 	.box-1-3 {
@@ -63,12 +64,19 @@
 	margin-top: $pad * 4;
 	margin-bottom: 0;
 
+	img, div, .slick-slide, a, .title {
+		&:focus {
+			outline: none;
+		}
+	}
+
+
 	img {
 		width: 100%;
 	}
 
 	.slick-prev:before, .slick-next:before {
-		color: #000;
+		color: #fff;
 		z-index: 10;
 	}
 

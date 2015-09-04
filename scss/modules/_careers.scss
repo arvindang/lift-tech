@@ -15,11 +15,28 @@
 		}
 	}
 
+	.group {
+		width: 100%;
+	}
+
+	#title2 {
+		display: block;
+	}
+
 	#title5 {
 		margin-top: $pad;
 	}
 
 	#Field5_1 {
 		margin-left: $pad;
+	}
+
+	#title6 {
+		margin-bottom: $pad;
+	}
+
+	.submit-wrapper {
+		border-top: 1px solid #ccc;
+		padding-top: $pad;
 	}
 }
