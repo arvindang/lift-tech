@@ -1,0 +1,21 @@
+footer {
+	font-size: .8em;
+	margin-top: 80px;
+
+	@media screen and (min-width: $high-tide) {
+		padding-left: 80px;
+		padding-top: 70px;
+		margin-top: 0;
+	}
+
+	a {
+		display: block;
+		font-family: $title-medium;
+		font-size: 12px;
+		text-decoration: none;
+	}
+
+	p {
+		line-height: 1.5em;
+	}
+}

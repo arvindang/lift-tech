@@ -1,0 +1,66 @@
+// TYPOGRAPHY IMPORTS
+
+@font-face {
+  font-family: idlewildBold;
+  src: url("assets/fonts/Idlewild-Bold.otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: idlewildBook;
+  src: url("assets/fonts/Idlewild-Book.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: idlewildLight;
+  src: url("assets/fonts/Idlewild-Light.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: idlewildMedium;
+  src: url("assets/fonts/Idlewild-Medium.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: idlewildThin;
+  src: url("assets/fonts/Idlewild-Thin.otf");
+  font-weight: normal;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+html {
+	// -webkit-font-smoothing: antialiased;
+}
+
+body {
+	font-family: $body-regular;
+	font-weight: 300;
+	line-height: 1.5em;
+	font-size: 14px;
+
+	@media all and (min-width: $low-tide) {
+		font-size: 16px;
+	}
+}
+
+h1, h2, h3 {
+	font-family: $title-light;
+	font-weight: 300;
+}
+
+a, a:active, a:focus {
+  color: #fff;
+}
+
+a:hover {
+  color: rgba(#fff, .65);
+}
+
+p {
+  line-height: 1.8em;
+}

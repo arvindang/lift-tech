@@ -5,86 +5,675 @@
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="assets/js/wufoo.js"></script>
 </head>
 <body>
 	<header>
-		<h1>Lift</h1>
+		<h1 class="lift-logo"><a href="#home">Lift</a></h1>
+		<nav class="main-nav">
+			<a href="#"><i class="icon ion-navicon-round open-nav"></i></a>
+			<a href="#" class="close-nav hide"><i class="icon ion-close"></i></a>
+
+			<ul class="hide menu">
+				<li><a href="#about">About</a></li>
+				<li><a href="#team">Team</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#careers">Careers</a></li>
+				<li><a href="#contact-form">Contact</a></li>
+			</ul>
+		</nav>
 	</header>
 
-	<section class="feature">
-		<h2>We see the future</h2>
-		<p>Lift helps your organization see further than ever before, navigating operational, regulatory and legal environments to implement UAV technology in your core business.</p>
-		<a href="mailto:michaell@lift-tech.com" class="btn">Take Flight</a>
+	<section class="content" id="home">
+		<div class="feature">
+			<h2>We see the future</h2>
+			<p>Lift helps your organization see further than ever before, navigating operational, regulatory and legal environments to implement UAV technology in your core business.</p>
+			<a href="#contact-form" class="btn">Take Flight</a>
+		</div>
 
-		<video autoplay loop poster="assets/images/drone-takeoff.jpg" id="bgvid">
+		<div class="badge">
+			<img src="assets/images/logos/faa-logo.png" class="faa-logo">
+			<p>
+				Section 333 approval.<br>
+				FAA Modernization and<br>
+				Reform Act of 2012
+			</p>
+		</div>
+
+		<video autoplay loop poster="assets/images/background/lift-gif-frames.gif" id="bgvid">
 			<source src="assets/video/web.webm" type="video/webm">
 			<source src="assets/video/web.ogg" type="video/ogg">
 			<source src="assets/video/web.mp4" type="video/mp4">
 		</video>
 	</section>
 
-	<section class="bio-container">
-		<h2>Our Team</h2>
-		<p class="tagline">Our combined expertise in UAV technology, architecture, enginering construction and strategy help your ideas take flight.</p>
+	<section class="content" id="about">
 		<div class="container">
-			<div class="grid grid-pad">
-				<div class="bio">
-					<img src="assets/images/00-Bob-Clark.jpg" alt="Bob Clark">
-					<h4>Bob Clark</h4>
-					<h5>CEO &amp; Chairman</h5>
+
+			<article class="about-us">
+				<h2>About Us</h2>
+				<p>Clayco, Inc. & Treehouse Adventures invest in future-building firms that drive progress. We leverage industrial expertise gained over decades of hands on experience combined data-driven platforms that reveal deeper opportunity. Our strategic investments give us the ability to improve nearly every facet of commercial and public life.</p>
+
+				<p>Lift leverages expertise gained in the field with Clayco, Inc. a leading AEC firm. Lift’s strategic relationship accelerates existing projects through real-world expertise while revealing new opportunity through our industry-leading strategists and subject matter experts.</p>
+			</article>
+
+			<div id="logos" class="grid">
+				<div class="col-1-4">
+					<img src="assets/images/logos/clayco.png">
+				</div>
+				<div class="col-1-4">
+					<img src="assets/images/logos/forum.png">
+				</div>
+				<div class="col-1-4">
+					<img src="assets/images/logos/concrete.png">
+				</div>
+				<div class="col-1-4">
+					<img src="assets/images/logos/ventana.png">
+				</div>
+			</div> <!-- logos -->
+		</div> <!-- container -->
+	</section>
+
+	<section class="content" id="team">
+		<div class="container">
+			<h2>Team</h2>
+
+			<div class="grid">
+				<div class="col-1-2">
+					<img src="assets/images/team/00-Bob-Clark.jpg" alt="Bob Clark">
+					<div class="title">
+						<h4>Bob Clark</h4>
+						<h5>CEO &amp; Chairman</h5>
+					</div>
 				</div>
 
-				<div class="bio">
-					<img src="assets/images/01-Russ-Burns.jpg" alt="Russ Burns">
-					<h4>Russ Burns</h4>
-					<h5>President</h5>
+				<div class="col-1-2">
+					<img src="assets/images/team/01-Russ-Burns.jpg" alt="Russ Burns">
+					<div class="title">
+						<h4>Russ Burns</h4>
+						<h5>President</h5>
+					</div>
+				</div>
+			</div> <!-- grid -->
+
+			<div class="grid">
+				<div class="col-1-2">
+					<img src="assets/images/team/02-Michael-Latiner.jpg" alt="Michael Latiner">
+					<div class="title">
+						<h4>Michael Latiner</h4>
+						<h5>Vice President, Strategy</h5>
+					</div>
 				</div>
 
-				<div class="bio">
-					<img src="assets/images/02-Michael-Latiner.jpg" alt="Michael Latiner">
-					<h4>Michael Latiner</h4>
-					<h5>Vice President, Strategy</h5>
+				<div class="col-1-2">
+					<img src="assets/images/team/08_ Andrew-Dennison.png" alt="Andrew Dennison">
+					<div class="title">
+						<h4>Andrew Dennison</h4>
+						<h5>COO</h5>
+					</div>
+				</div>
+			</div> <!-- grid -->
+
+			<div class="grid">
+				<div class="col-1-3 col-mb-1-2">
+					<img src="assets/images/team/04-Shanon-Marks.jpg" alt="Shanon Marks">
+					<div class="title">
+						<h4>Shanon Marks</h4>
+						<h5>Vice President, Innovation</h5>
+					</div>
 				</div>
 
-				<div class="bio">
-					<img src="assets/images/03-Carmen-Lonstein.jpg" alt="Carmen Lonstein">
-					<h4>Carmen Lonstein</h4>
-					<h5>Vice President, Legal &amp; Policy</h5>
+				<div class="col-1-3 col-mb-1-2">
+					<img src="assets/images/team/03-Carmen-Lonstein.jpg" alt="Carmen Lonstein">
+					<div class="title">
+						<h4>Carmen Lonstein</h4>
+						<h5>Vice President, Legal &amp; Policy</h5>
+					</div>
 				</div>
+
+				<div class="col-1-3 col-mb-1-2">
+					<img src="assets/images/team/05-Tomislav-Zigo.jpg" alt="Tomislav Zigo">
+					<div class="title">
+						<h4>Tomislav Zigo</h4>
+						<h5>Vice President, Technology</h5>
+					</div>
+				</div>
+
+				<div class="col-1-3 col-mb-1-2">
+					<img src="assets/images/team/06-Scott-Lumsden.jpg" alt="Scott Lumsden">
+					<div class="title">
+						<h4>Scott Lumsden</h4>
+						<h5>Vice President, Technical Assurance</h5>
+					</div>
+				</div>
+
+				<div class="col-1-3 col-mb-1-2">
+					<img src="assets/images/team/07-Shawn-Clark.jpg" alt="Shawn Clark">
+					<div class="title">
+						<h4>Shawn Clark</h4>
+						<h5>Vice President, Project Management</h5>
+					</div>
+				</div>
+			</div> <!-- grid -->
+
+		</div> <!-- container -->
+	</section>
+
+	<section class="content" id="services">
+		<div class="container">
+			<h2>Services</h2>
+			<p>Lift helps you determine where and how to apply UAV technology, navigating the regulatory and legal environment allowing companies to implement UAV tech in their core business. We apply our expertise in AEC to the practical needs of pillar industries through a low-cost, reliable aerial platform. Planes, satellite technology and helicopters are costly platforms, subject to weather, timing and availability. Our approach helps you see beyond the horizon, preparing your business for what comes next.</p>
+		</div>
+
+		<div id="service-slider" class="">
+			<div class="clip">
+				<div class="title">Industrial inspections and analysis</div>
+				<img src="assets/images/gallery/1-inspection.png">
+				<cite><a href="https://www.flickr.com/photos/dfb_photos/5856182813">Flickr Source</a>, photo by dfbphotos</cite>
 			</div>
-
-			<div class="grid grid-pad">
-				<div class="bio">
-					<img src="assets/images/04-Shanon-Marks.jpg" alt="Shanon Marks">
-					<h4>Shanon Marks</h4>
-					<h5>Vice President, Innovation</h5>
-				</div>
-
-				<div class="bio">
-					<img src="assets/images/05-Tomislav-Zigo.jpg" alt="Tomislav Zigo">
-					<h4>Tomislav Zigo</h4>
-					<h5>Vice President, Technology</h5>
-				</div>
-
-				<div class="bio">
-					<img src="assets/images/06-Scott-Lumsden.jpg" alt="Scott Lumsden">
-					<h4>Scott Lumsden</h4>
-					<h5>Vice President, Technical Assurance</h5>
-				</div>
-
-				<div class="bio">
-					<img src="assets/images/07-Shawn-Clark.jpg" alt="Shawn Clark">
-					<h4>Shawn Clark</h4>
-					<h5>Vice President, Project Management</h5>
-				</div>
+			<div class="clip">
+				<div class="title">Aerial surveys for inaccessible areas</div>
+				<img src="assets/images/gallery/2-inaccessible.png">
 			</div>
+			<div class="clip">
+				<div class="title">Precision photogrammetry and crop scouting</div>
+				<img src="assets/images/gallery/3-scouting.png">
+			</div>
+			<div class="clip">
+				<div class="title">Aerial view for  Virtual Reality and Augmented Reality simulations</div>
+				<img src="assets/images/gallery/4-aerial.png">
+			</div>
+			<div class="clip">
+				<div class="title">Communications and utility structure inspection</div>
+				<img src="assets/images/gallery/5-telecom.png">
+			</div>
+		</div>
+
+		<div class="service-blocks">
+			<table class="grid" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="box box-dk box-1-3">Utility & Infrastructure</td>
+					<td class="box box-md box-1-3">Architecture, Engineering, & Construction</td>
+					<td class="box box-dk box-1-3">Energy</td>
+				</tr>
+			</table>
+
+			<table class="grid" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="box-1-2 box box-lt">Real Estate</td>
+					<td class="box-1-2 box box-md">Insurance & Financial Services</td>
+				</tr>
+			</table>
 		</div>
 	</section>
 
-	<footer>
-		<p class="copyright">Copyright Lift, 2015</p>
-		<a href="mailto:michaell@lift-tech.com" class="contact-link">Contact us</a>
-	</footer>
+	<section id="careers" class="content">
+		<div class="container">
+			<h2>Careers</h2>
+			<p>Have UAV experience? Want to fly drones for a living?</p>
+			<h3>Lift now hiring drone operators.</h3>
+			<form id="form3" name="form3" class="wufoo topLabel page default" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
+			      action="https://mudai.wufoo.com/forms/q1b66huo09jc0cs/#public">
+
+			    <div class="group">
+				<ul class="col-1-2 col-mb-1">
+					<li id="foli1" class="notranslate      ">
+					<label class="desc" id="title1" for="Field1">
+					Name
+					<span id="req_1" class="req">*</span>
+					</label>
+					<div>
+					<input id="Field1" name="Field1" type="text" class="field text medium" value="" maxlength="255" tabindex="1" onkeyup=""       required />
+					</div>
+					</li>
+					<li id="foli2" class="phone notranslate      ">
+					<label class="desc" id="title2" for="Field2">
+					Phone
+					<span id="req_2" class="req">*</span>
+					</label>
+					<span>
+					<input id="Field2" name="Field2" type="tel" class="field text" value="" size="3" maxlength="3" tabindex="2"       required />
+					</span>
+					<span class="symbol">-</span>
+					<span>
+					<input id="Field2-1" name="Field2-1" type="tel" class="field text" value="" size="3" maxlength="3" tabindex="3" required />
+					</span>
+					<span class="symbol">-</span>
+					<span>
+					 <input id="Field2-2" name="Field2-2" type="tel" class="field text" value="" size="4" maxlength="4" tabindex="4" required />
+					</span>
+					</li>
+					<li id="foli3" class="notranslate      ">
+					<label class="desc" id="title3" for="Field3">
+					Email
+					<span id="req_3" class="req">*</span>
+					</label>
+					<div>
+					<input id="Field3" name="Field3" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="5"       required />
+					</div>
+					</li>
+					<li id="foli4" class="notranslate       ">
+					<label class="desc" id="title4" for="Field4">
+					Current Location
+					<span id="req_4" class="req">*</span>
+					</label>
+					<div>
+					<select id="Field4" name="Field4" class="field select medium"       tabindex="6" >
+					<option value="" selected="selected">
+					</option>
+					<option value="Alabama" >
+					Alabama
+					</option>
+					<option value="Alaska" >
+					Alaska
+					</option>
+					<option value="Arizona" >
+					Arizona
+					</option>
+					<option value="Arkansas" >
+					Arkansas
+					</option>
+					<option value="California" >
+					California
+					</option>
+					<option value="Colorado" >
+					Colorado
+					</option>
+					<option value="Connecticut" >
+					Connecticut
+					</option>
+					<option value="Delaware" >
+					Delaware
+					</option>
+					<option value="Florida" >
+					Florida
+					</option>
+					<option value="Georgia" >
+					Georgia
+					</option>
+					<option value="Hawaii" >
+					Hawaii
+					</option>
+					<option value="Idaho" >
+					Idaho
+					</option>
+					<option value="Illinois" >
+					Illinois
+					</option>
+					<option value="Indiana" >
+					Indiana
+					</option>
+					<option value="Iowa" >
+					Iowa
+					</option>
+					<option value="Kansas" >
+					Kansas
+					</option>
+					<option value="Kentucky" >
+					Kentucky
+					</option>
+					<option value="Louisiana" >
+					Louisiana
+					</option>
+					<option value="Maine" >
+					Maine
+					</option>
+					<option value="Maryland" >
+					Maryland
+					</option>
+					<option value="Massachusetts" >
+					Massachusetts
+					</option>
+					<option value="Michigan" >
+					Michigan
+					</option>
+					<option value="Minnesota" >
+					Minnesota
+					</option>
+					<option value="Mississippi" >
+					Mississippi
+					</option>
+					<option value="Missouri" >
+					Missouri
+					</option>
+					<option value="Montana" >
+					Montana
+					</option>
+					<option value="Nebraska" >
+					Nebraska
+					</option>
+					<option value="Nevada" >
+					Nevada
+					</option>
+					<option value="New Hampshire" >
+					New Hampshire
+					</option>
+					<option value="New Jersey" >
+					New Jersey
+					</option>
+					<option value="New Mexico" >
+					New Mexico
+					</option>
+					<option value="New York" >
+					New York
+					</option>
+					<option value="North Carolina" >
+					North Carolina
+					</option>
+					<option value="North Dakota" >
+					North Dakota
+					</option>
+					<option value="Ohio" >
+					Ohio
+					</option>
+					<option value="Oklahoma" >
+					Oklahoma
+					</option>
+					<option value="Oregon" >
+					Oregon
+					</option>
+					<option value="Pennsylvania" >
+					Pennsylvania
+					</option>
+					<option value="Rhode Island" >
+					Rhode Island
+					</option>
+					<option value="South Carolina" >
+					South Carolina
+					</option>
+					<option value="South Dakota" >
+					South Dakota
+					</option>
+					<option value="Tennessee" >
+					Tennessee
+					</option>
+					<option value="Texas" >
+					Texas
+					</option>
+					<option value="Utah" >
+					Utah
+					</option>
+					<option value="Vermont" >
+					Vermont
+					</option>
+					<option value="Virginia" >
+					Virginia
+					</option>
+					<option value="Washington" >
+					Washington
+					</option>
+					<option value="West Virginia" >
+					West Virginia
+					</option>
+					<option value="Wisconsin" >
+					Wisconsin
+					</option>
+					<option value="Wyoming" >
+					Wyoming
+					</option>
+					</select>
+
+					</div>
+					</li>
+					<li id="foli5" class="notranslate      ">
+
+					<![if !IE | (gte IE 8)]>
+					<legend id="title5" class="desc">
+					Willing to travel?
+					<span id="req_5" class="req">*</span>
+					</legend>
+					<![endif]>
+					<!--[if lt IE 8]>
+					<label id="title5" class="desc">
+					Willing to travel?
+					<span id="req_5" class="req">*</span>
+					</label>
+					<![endif]-->
+					<div>
+					<input id="radioDefault_5" name="Field5" type="hidden" value="" />
+					<span>
+					<input id="Field5_0" name="Field5" type="radio" class="field radio" value="Yes" tabindex="7" checked="checked"     required />
+					<label class="choice" for="Field5_0" >
+					Yes</label>
+					</span>
+					<span>
+					<input id="Field5_1" name="Field5" type="radio" class="field radio" value="No" tabindex="8"     required />
+					<label class="choice" for="Field5_1" >
+					No</label>
+					</span>
+					</div>
+					</li>
+					</ul>
+
+
+					<ul class="col-1-2 col-mb-1">
+					<li id="foli6" class="notranslate  twoColumns     ">
+					<![if !IE | (gte IE 8)]>
+					<legend id="title6" class="desc">
+					What types of flights have you flown?
+					</legend>
+					<![endif]>
+					<!--[if lt IE 8]>
+					<label id="title6" class="desc">
+					What types of flights have you flown?
+					</label>
+					<![endif]-->
+					<div>
+
+					<div class="col-1-2 checkbox">
+						<span>
+						<input id="Field6" name="Field6" type="checkbox" class="field checkbox" value="Surveying" tabindex="9"     />
+						<label class="choice" for="Field6">Surveying</label>
+						</span>
+
+						<span>
+						<input id="Field7" name="Field7" type="checkbox" class="field checkbox" value="Utility Inspection" tabindex="10"     />
+						<label class="choice" for="Field7">Utility Inspection</label>
+						</span>
+
+						<span>
+						<input id="Field8" name="Field8" type="checkbox" class="field checkbox" value="Film and TV" tabindex="11"     />
+						<label class="choice" for="Field8">Film and TV</label>
+						</span>
+
+						<span>
+						<input id="Field9" name="Field9" type="checkbox" class="field checkbox" value="Mining" tabindex="12"     />
+						<label class="choice" for="Field9">Mining</label>
+						</span>
+					</div>
+
+
+					<div class="col-1-2 checkbox">
+						<span>
+						<input id="Field10" name="Field10" type="checkbox" class="field checkbox" value="Real Estate" tabindex="13"     />
+						<label class="choice" for="Field10">Real Estate</label>
+						</span>
+
+						<span>
+						<input id="Field11" name="Field11" type="checkbox" class="field checkbox" value="Construction" tabindex="14"     />
+						<label class="choice" for="Field11">Construction</label>
+						</span>
+
+						<span>
+						<input id="Field12" name="Field12" type="checkbox" class="field checkbox" value="Infrastructure Inspection" tabindex="15"     />
+						<label class="choice" for="Field12">Infrastructure Inspection</label>
+						</span>
+					</div>
+
+					</div>
+					</li>
+					<li id="foli106" class="notranslate      ">
+					<label class="desc" id="title106" for="Field106">
+					Other
+					</label>
+					<div>
+					<input id="Field106" name="Field106" type="text" class="field text medium" value="" maxlength="255" tabindex="16" onkeyup=""       />
+					</div>
+<!-- 					</li> <li class="buttons ">
+					<div>
+					    <input id="saveForm" name="saveForm" class="btn btTxt submit"
+					    type="submit" value="Submit"
+					 /></div>
+					</li> -->
+
+					<li class="hide">
+					<label for="comment">Do Not Fill This Out</label>
+					<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+					<input type="hidden" id="idstamp" name="idstamp" value="S+lvtcmJNkDHMXmQNuP1ZXbwVVFfkvdlj4LXPdgaHEU=" />
+					</li>
+				</ul>
+				</div> <!-- group -->
+
+				<div class="submit-wrapper">
+				    <input id="saveForm" name="saveForm" class="btn btTxt submit"
+				    type="submit" value="Submit" tabindex="17"
+				 /></div>
+			</form>
+		</div>
+	</section>
+
+	<section id="contact">
+		<div class="module">
+			<div class="container">
+				<div class="grid">
+					<div class="col-2-3 contact-form" id="contact-form">
+						<h2>Get Started</h2>
+
+						<form id="form4" name="form4" class="wufoo topLabel page" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
+						      action="https://mudai.wufoo.com/forms/r1l7gc030039398/#public">
+
+						<ul>
+
+						<li id="foli10" class="notranslate      ">
+						<div>
+						<input id="Field10" name="Field10" type="text" class="field text medium" value="" maxlength="255" tabindex="18" onkeyup=""       required placeholder="Your name" />
+						</div>
+						</li>
+						<li id="foli9" class="notranslate      ">
+						<div>
+						<input id="Field9" name="Field9" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="19"       required placeholder="Your email"/>
+						</div>
+						</li>
+						<li class="buttons ">
+							<div>
+<input id="saveForm" name="saveForm" class="btTxt submit"type="submit" value="Submit" tabindex="20"/>
+		                    </div>
+						</li>
+
+						<li class="hide">
+						<label for="comment">Do Not Fill This Out</label>
+						<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+						<input type="hidden" id="idstamp" name="idstamp" value="7pXhJZGCA8KARP1c/ByD/S4TX/aJM04T94QsuhrDrac=" />
+						</li>
+						</ul>
+						</form>
+					</div>
+
+
+
+					<footer class="col-1-3">
+						<p>
+							35 East Wacker Drive<br>
+							Suite 1300<br>
+							Chicago IL, 60601
+						</p>
+						<a href="mailto:andrew@lift-tech.com" class="contact-link">Contact us</a>
+						<p class="copyright">Copyright Lift, 2015</p>
+					</footer>
+				</div> <!-- grid -->
+			</div> <!-- container -->
+		</div> <!-- module -->
+	</section>
+
+	<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.8/slick.min.js"></script>
+
+	<script type="text/javascript">
+		// $('#logos').slick({
+		//   infinite: false,
+		//   slidesToShow: 4,
+		//   slidesToScroll: 3,
+		//   arrows: true,
+		//   centerPadding: '60px',
+		//   responsive: [
+		//       {
+		//         breakpoint: 600,
+		//         settings: {
+		//           slidesToShow: 3,
+		//           slidesToScroll: 3
+		//         }
+		//       },
+		//       {
+		//         breakpoint: 460,
+		//         settings: {
+		//           slidesToShow: 2,
+		//           slidesToScroll: 2
+		//         }
+		//       }
+		//     ]
+		// });
+
+		$('#service-slider').slick({
+		  slidesToShow: 3,
+		  slidesToScroll: 1,
+		  autoplay: true,
+		  autoplaySpeed: 3000,
+		  centerMode: true,
+		  responsive: [
+		      {
+		        breakpoint: 2160,
+		        settings: {
+		          slidesToShow: 2,
+		        }
+		      },
+		      {
+		        breakpoint: 960,
+		        settings: {
+		          slidesToShow: 1,
+		        }
+		      },
+		      {
+		        breakpoint: 720,
+		        settings: {
+		          slidesToShow: 1,
+		          centerMode: false
+		        }
+		      }
+		    ]
+		});
+
+		$('.open-nav').on('click', function(event) {
+			event.preventDefault();
+			$('.menu').removeClass('hide');
+			$('.close-nav').removeClass('hide');
+			$(this).addClass('hide');
+		});
+
+		$('.close-nav').on('click', function(event) {
+			event.preventDefault();
+			$('.menu').addClass('hide');
+			$('.open-nav').removeClass('hide');
+			$(this).addClass('hide');
+		});
+	</script>
+
+	<script type="text/javascript">
+		$(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html,body').animate({
+		          scrollTop: target.offset().top
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		  });
+		});
+	</script>
 
 </body>
 </html>

@@ -1,0 +1,21 @@
+video#bgvid {
+	display: none;
+	visibility: hidden;
+
+	@media all and (min-width: 800px) {
+		visibility: visible;
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		z-index: 0;
+		-webkit-transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+		background: url(assets/images/background/lift-gif-frames.gif) no-repeat;
+		background-size: cover;
+	}
+}

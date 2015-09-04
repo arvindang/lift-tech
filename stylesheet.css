@@ -1,10 +1,45 @@
+@import "http://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css";
+@import "http://cdn.jsdelivr.net/jquery.slick/1.5.8/slick-theme.css";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.hide {
+  display: none; }
+
+#home h1, #home h2, #home h3, #team .title h4, #team .title h5, #services .grid {
+  margin: 0; }
+
+video#bgvid {
+  display: none;
+  visibility: hidden; }
+  @media all and (min-width: 800px) {
+    video#bgvid {
+      visibility: visible;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 0;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      background: url(assets/images/background/lift-gif-frames.gif) no-repeat;
+      background-size: cover; } }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -378,38 +413,42 @@ th {
   src: url("assets/fonts/Idlewild-Thin.otf");
   font-weight: normal; }
 body {
-  background-size: cover;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   line-height: 1.5em;
-  font-size: 16px; }
+  font-size: 14px; }
+  @media all and (min-width: 480px) {
+    body {
+      font-size: 16px; } }
 
 h1, h2, h3 {
   font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300; }
 
-h2 {
-  font-size: 2em;
-  line-height: 1.5em; }
-  @media all and (min-width: 800px) {
-    h2 {
-      font-size: 3em; } }
-
-p {
-  font-size: 1em;
-  line-height: 1.5em; }
-  @media all and (min-width: 800px) {
-    p {
-      font-size: 1.5em; } }
-
-header h1, .feature, footer {
+a, a:active, a:focus {
   color: #fff; }
 
+a:hover {
+  color: rgba(255, 255, 255, 0.65); }
+
+p {
+  line-height: 1.8em; }
+
+.group, .grid:after, form.default:after, header:after, #about:after, #team:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .container {
-  max-width: 1140px;
+  max-width: 720px;
   margin: 0 auto; }
 
-.col, .bio-container .bio {
+.grid {
+  margin: 0 0 20px 0; }
+  .grid:after {
+    content: ""; }
+
+[class*='col-'] {
   float: left;
   padding-right: 20px; }
 
@@ -419,7 +458,7 @@ header h1, .feature, footer {
 .col-1-3 {
   width: 33.33%; }
 
-.col-1-2, .bio-container .bio {
+.col-1-2 {
   width: 50%; }
 
 .col-1-4 {
@@ -428,137 +467,421 @@ header h1, .feature, footer {
 .col-1-8 {
   width: 12.5%; }
 
+@media all and (max-width: 480px) {
+  .col-mb-1-2 {
+    width: 50%; } }
+
+@media all and (max-width: 560px) {
+  .col-mb-1 {
+    float: none;
+    display: block;
+    width: 100%; } }
+
 /* Opt-in outside padding */
 .grid-pad {
-  padding: 0 0 0 20px; }
+  padding: 20px 0 20px 20px; }
   .grid-pad [class*='col-']:last-of-type {
     padding-right: 20px; }
 
+form.default {
+  color: #8A8A8A; }
+  form.default ul {
+    list-style: none;
+    padding: 0; }
+  form.default label, form.default legend {
+    font-size: 12px; }
+  form.default .req {
+    color: #000; }
+  form.default input[type=text] + label, form.default input[type=email] + label, form.default input[type=tel] + label {
+    display: block; }
+  form.default input[type=text], form.default input[type=email], form.default input[type=tel] {
+    border: 1px solid #C2C2C2;
+    margin-bottom: 20px;
+    display: inline-block; }
+  form.default input[type=radio] {
+    display: inline-block; }
+  form.default input[type=submit] {
+    border: 1px solid #F3933E;
+    background: transparent;
+    color: #F3933E;
+    text-decoration: none;
+    font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    padding: 10px 40px;
+    display: inline-block;
+    font-size: 12px; }
+    form.default input[type=submit]:hover, form.default input[type=submit]:focus {
+      background: #F3933E;
+      color: #fff; }
+  form.default .checkbox span {
+    display: block; }
+
 header {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 10px 0 10px 20px;
-  position: absolute;
-  z-index: 10;
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  z-index: 100;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  padding: 20px; }
   header h1 {
     margin: 0;
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    color: #000;
+    font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    display: inline-block; }
+    header h1 a, header h1 a:focus, header h1 a:hover, header h1 a:active, header h1 a:visited {
+      color: #000;
+      text-decoration: none; }
+    @media screen and (min-width: 960px) {
+      header h1 {
+        float: left; } }
+
+.main-nav {
+  overflow-y: scroll; }
+  .main-nav .icon {
+    color: #000;
+    position: absolute;
+    top: 15px;
+    right: 20px; }
+  .main-nav .open-nav {
+    font-size: 32px; }
+  .main-nav .close-nav {
+    font-size: 27px; }
+  .main-nav .close-nav:hover {
+    border-bottom: none; }
+  .main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding-bottom: 80px; }
+  .main-nav li a {
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.7em;
+    display: inline-block;
+    font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    margin-top: 40px; }
+  @media screen and (min-width: 960px) {
+    .main-nav {
+      display: block;
+      float: right; }
+      .main-nav ul {
+        padding-bottom: 0; }
+      .main-nav li {
+        text-align: center;
+        float: left;
+        padding: 0;
+        line-height: 1em; }
+      .main-nav li a {
+        display: inline-block;
+        margin: 0;
+        margin-right: 20px;
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.6); }
+        .main-nav li a:last-child {
+          margin-right: 40px; }
+      .main-nav li a.active {
+        color: #000; }
+      .main-nav li a:hover {
+        color: #000; } }
 
 footer {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  font-size: .8em; }
-  footer .copyright {
-    float: left;
-    margin: 0; }
-  footer .contact-link {
-    float: right;
-    color: white;
+  font-size: .8em;
+  margin-top: 80px; }
+  @media screen and (min-width: 720px) {
+    footer {
+      padding-left: 80px;
+      padding-top: 70px;
+      margin-top: 0; } }
+  footer a {
+    display: block;
+    font-family: idlewildMedium, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 12px;
     text-decoration: none; }
+  footer p {
+    line-height: 1.5em; }
 
-.btn {
-  background: #FDA129;
-  padding: 20px 40px;
-  font-size: 1.5em;
-  font-family: idlewildMedium;
-  color: white;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 50px; }
-  .btn:hover {
-    background: #be6c02; }
+.content h2 {
+  margin-top: 0; }
+.content p:last-of-type {
+  margin-bottom: 0; }
 
-html {
-  box-sizing: border-box; }
-
-*, *:before, *:after {
-  box-sizing: inherit; }
-
-.group, .grid:after, footer:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.feature {
+#home {
+  background: url(assets/images/background/lift-gif-frames.gif) no-repeat top center/cover;
+  padding-top: 200px;
+  padding-bottom: 160px;
   text-align: center;
-  padding-top: 10vh;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   position: relative;
-  background: url(assets/images/lift-gif-frames.gif) #000 no-repeat left center fixed;
-  background-size: cover;
-  height: 100vh; }
-  @media all and (min-width: 800px) {
-    .feature {
-      padding-top: 15vh; } }
-  .feature h2 {
-    max-width: 900px;
-    margin: 40px auto;
+  overflow: hidden; }
+  #home h2 {
+    font-size: 2.1em;
+    line-height: 1.5em; }
+  #home .content {
+    position: relative; }
+  #home .feature {
     position: relative;
-    z-index: 10; }
-  .feature p {
-    max-width: 860px;
+    max-width: 640px;
     margin: 0 auto;
-    padding: 0 20px;
-    position: relative;
-    z-index: 10; }
-  .feature .btn {
-    position: relative;
     z-index: 10;
-    margin-top: 60px; }
-
-video#bgvid {
-  display: none;
-  visibility: hidden; }
-  @media all and (min-width: 800px) {
-    video#bgvid {
-      visibility: visible;
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      z-index: 0;
-      -webkit-transform: translateX(-50%) translateY(-50%);
-      transform: translateX(-50%) translateY(-50%);
-      background: url(assets/images/drone-takeoff.jpg) no-repeat;
-      background-size: cover; } }
-
-.bio-container {
-  background: #3d3d3d;
-  color: #fff;
-  padding-bottom: 60px; }
-  .bio-container h2, .bio-container .tagline {
     color: #fff;
-    text-align: center; }
-  .bio-container h2 {
-    margin: 0;
-    padding: 80px 10px 10px 10px; }
-  .bio-container p {
-    padding: 0 10px; }
-  .bio-container h4, .bio-container h5 {
-    margin: 0;
-    font-size: .9em; }
-  .bio-container h4 {
-    font-weight: 300; }
-  .bio-container h5 {
-    font-weight: 400; }
-  .bio-container .tagline {
-    max-width: 800px;
-    margin: 0 auto;
-    font-weight: 100;
-    padding-bottom: 60px; }
-  .bio-container img {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); }
+  #home .btn {
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+    font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    padding: 10px 40px;
     display: inline-block;
-    max-width: 70%; }
-  .bio-container .bio {
-    margin-bottom: 40px;
+    font-size: 12px;
+    text-shadow: none;
+    margin-top: 40px; }
+    #home .btn:hover, #home .btn:focus {
+      background: #fff;
+      color: #fff; }
+    #home .btn:hover {
+      color: #000; }
+  #home .badge {
+    display: none; }
+    @media screen and (min-width: 960px) {
+      #home .badge {
+        display: block;
+        position: absolute;
+        left: 3%;
+        bottom: 6%;
+        z-index: 10; }
+        #home .badge img {
+          float: left;
+          opacity: .7; }
+        #home .badge p {
+          font-size: 10px;
+          float: left;
+          color: #fff;
+          text-align: left;
+          margin-top: 40px;
+          margin-left: 20px; } }
+
+#about {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 80px; }
+  #about h2 {
+    margin-bottom: 40px; }
+  #about .about-us {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 40px; }
+  #about #logos {
     text-align: center; }
-    @media all and (min-width: 600px) {
-      .bio-container .bio {
-        width: 25%; } }
+  #about #logos img {
+    max-width: 80px; }
+  #about .slick-slider {
+    max-width: 90%;
+    margin: 0 auto; }
+  #about .slick-prev:before, #about .slick-next:before {
+    color: #000; }
+  #about .slick-slide:focus {
+    outline: none; }
+
+#team {
+  padding-top: 80px;
+  position: relative; }
+  #team:after {
+    content: '';
+    background: url(assets/images/background/bg-2.png) no-repeat bottom left/cover;
+    background-attachment: fixed;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    height: 890px; }
+  #team .container {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 40px;
+    position: relative;
+    z-index: 10; }
+  #team h2 {
+    margin-bottom: 40px; }
+  #team img {
+    max-width: 100%;
+    display: block; }
+  @media screen and (min-width: 480px) {
+    #team .grid {
+      margin-bottom: 40px; } }
+  #team .title {
+    border: 1px solid #eee;
+    padding: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+    background: #fff; }
+    #team .title h4 {
+      font-family: idlewildBold, "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: .8em;
+      line-height: 1.3em;
+      padding-top: 10px; }
+    #team .title h5 {
+      font-size: .7em;
+      line-height: 1em;
+      padding-top: 8px; }
+  #team .col-1-3:nth-child(4), #team .col-1-3:nth-child(5) {
+    margin-top: 20px; }
+  @media screen and (max-width: 480px) {
+    #team .col-mb-1-2:nth-child(3) {
+      margin-top: 20px; } }
+  @media screen and (min-width: 566px) {
+    #team .col-1-3:nth-child(4) {
+      clear: both; } }
+
+#services {
+  padding-top: 80px;
+  padding-bottom: 80px; }
+  #services .container {
+    padding-right: 20px;
+    padding-left: 20px; }
+  #services h2 {
+    margin-bottom: 40px; }
+  #services .service-blocks {
+    text-align: center;
+    font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+    @media screen and (min-width: 720px) {
+      #services .service-blocks {
+        font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; } }
+  #services .grid {
+    display: table;
+    border-collapse: collapse;
+    padding: 0;
+    width: 100%; }
+  #services .box {
+    display: table-cell;
+    vertical-align: middle;
+    height: 140px;
+    font-size: 14px;
+    padding: 0 10px; }
+  #services .box-1-3 {
+    width: 33.33333%; }
+  #services .box-1-2 {
+    width: 50%; }
+  #services .box-dk {
+    background: #858996; }
+  #services .box-md {
+    background: #9296A3; }
+  #services .box-lt {
+    background: #AEB4BF; }
+
+#service-slider {
+  margin-top: 80px;
+  margin-bottom: 0; }
+  #service-slider img:focus, #service-slider div:focus, #service-slider .slick-slide:focus, #service-slider a:focus, #service-slider .title:focus {
+    outline: none; }
+  #service-slider img {
+    width: 100%; }
+  #service-slider cite {
+    display: none;
+    visibility: hidden; }
+  #service-slider .slick-prev:before, #service-slider .slick-next:before {
+    color: #fff;
+    z-index: 10; }
+  #service-slider .slick-next {
+    right: 15px; }
+  #service-slider .slick-prev {
+    left: 15px;
+    z-index: 10; }
+  #service-slider .clip {
+    position: relative; }
+  #service-slider .title {
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    color: #fff;
+    width: 100%;
+    font-family: idlewildMedium, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 1.25em;
+    line-height: 1.5em;
+    padding-left: 20px;
+    padding-right: 20px; }
+
+#careers {
+  padding-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px; }
+  #careers h3 {
+    font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  #careers legend {
+    margin-top: 20px; }
+    @media screen and (min-width: 560px) {
+      #careers legend {
+        margin-top: 0; } }
+  #careers .group, #careers .grid:after, #careers form.default:after, #careers header:after, #careers #about:after, #careers #team:after {
+    width: 100%; }
+  #careers #title2 {
+    display: block; }
+  #careers #title5 {
+    margin-top: 20px; }
+  #careers #Field5_1 {
+    margin-left: 20px; }
+  #careers #title6 {
+    margin-bottom: 20px; }
+  #careers #foli106 {
+    clear: both;
+    display: block; }
+  #careers #title106 {
+    display: block;
+    margin-top: 20px; }
+  #careers .submit-wrapper {
+    border-top: 1px solid #ccc;
+    padding-top: 40px;
+    margin-top: 20px; }
+
+#contact {
+  background: url(assets/images/background/bg-3.png) no-repeat bottom center/cover;
+  background-attachment: fixed;
+  color: #fff;
+  padding-top: 300px; }
+  #contact .module {
+    background: rgba(57, 56, 42, 0.65);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px; }
+  #contact h2 {
+    margin-bottom: 60px; }
+  #contact ul {
+    list-style: none;
+    padding: 0; }
+  #contact input[type=text], #contact input[type=email] {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    width: 80%; }
+    #contact input[type=text]:focus, #contact input[type=email]:focus {
+      outline: none; }
+  #contact input[type=submit] {
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+    font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    padding: 10px 40px;
+    display: inline-block;
+    font-size: 12px; }
+    #contact input[type=submit]:hover, #contact input[type=submit]:focus {
+      background: #fff;
+      color: #fff; }
+    #contact input[type=submit]:hover, #contact input[type=submit]:focus {
+      color: #000; }
+  #contact .contact-form {
+    border: none; }
+    @media screen and (min-width: 720px) {
+      #contact .contact-form {
+        border-right: 1px solid rgba(255, 255, 255, 0.6); } }
+  @media screen and (max-width: 720px) {
+    #contact .col-1-3, #contact .col-2-3 {
+      float: none;
+      display: block;
+      width: 100%; } }
 
 /*# sourceMappingURL=stylesheet.css.map */

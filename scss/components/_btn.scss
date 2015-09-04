@@ -1,0 +1,15 @@
+@mixin btn($color: $accent) {
+	border: 1px solid $color;
+	background: transparent;
+	color: $color;
+	text-decoration: none;
+	font-family: $title-light;
+	padding: 10px 40px;
+	display: inline-block;
+	font-size: 12px;
+
+	&:hover, &:focus {
+		background: $color;
+		color: #fff;
+	}
+}

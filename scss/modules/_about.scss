@@ -1,0 +1,40 @@
+#about {
+	padding-right: $pad;
+	padding-left: $pad;
+	padding-top: $pad * 4;
+
+	&:after {
+		@extend .group;
+	}
+
+	h2 {
+		margin-bottom: $pad * 2;
+	}
+
+	.about-us {
+		padding-bottom: $pad * 2;
+		border-bottom: 1px solid #eee;
+		margin-bottom: $pad * 2;
+	}
+
+	#logos {
+		text-align: center;
+	}
+
+	#logos img {
+		max-width: 80px;
+	}
+
+	.slick-slider {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+
+	.slick-prev:before, .slick-next:before {
+		color: #000;
+	}
+
+	.slick-slide:focus {
+		outline: none;
+	}
+}

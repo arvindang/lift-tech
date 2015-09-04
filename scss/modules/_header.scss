@@ -1,0 +1,29 @@
+header {
+	background: rgba(255, 255, 255, .9);
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	width: 100%;
+	padding: $pad;
+
+	h1 {
+		margin: 0;
+		font-size: 1.5em;
+		color: #000;
+		font-family: $title-light;
+		display: inline-block;
+
+		a, a:focus, a:hover, a:active, a:visited {
+			color: #000;
+			text-decoration: none;
+		}
+
+		@media screen and (min-width: 960px) {
+			float: left;
+		}
+	}
+
+	&:after {
+		@extend .group;
+	}
+}
