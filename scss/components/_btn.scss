@@ -8,7 +8,7 @@
 	display: inline-block;
 	font-size: 12px;
 
-	&:hover {
+	&:hover, &:focus {
 		background: $color;
 		color: #fff;
 	}

@@ -35,8 +35,19 @@
 		margin-bottom: $pad;
 	}
 
+	#foli106 {
+		clear: both;
+		display: block;
+	}
+
+	#title106 {
+		display: block;
+		margin-top: $pad;
+	}
+
 	.submit-wrapper {
 		border-top: 1px solid #ccc;
-		padding-top: $pad;
+		padding-top: $pad * 2;
+		margin-top: $pad;
 	}
 }

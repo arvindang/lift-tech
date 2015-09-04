@@ -5,6 +5,7 @@
 	&:after {
 		content: '';
 		background: url(assets/images/background/bg-2.png) no-repeat bottom left / cover;
+		background-attachment: fixed;
 		@extend .group;
 		position: absolute;
 		bottom: 0;

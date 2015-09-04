@@ -1,5 +1,6 @@
 #contact {
-	background: url(assets/images/background/bg-3.png) no-repeat center center / cover;
+	background: url(assets/images/background/bg-3.png) no-repeat bottom center / cover;
+	background-attachment: fixed;
 	color: #fff;
 	padding-top: 300px;
 
@@ -11,7 +12,7 @@
 		padding-right: $pad;
 	}
 
-	h3 {
+	h2 {
 		margin-bottom: 60px;
 	}
 
@@ -37,7 +38,7 @@
 		@include btn(#fff);
 
 
-		&:hover {
+		&:hover, &:focus {
 			color: #000;
 		}
 	}

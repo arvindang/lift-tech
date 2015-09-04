@@ -422,7 +422,7 @@ body {
       font-size: 16px; } }
 
 h1, h2, h3 {
-  font-family: idlewildBold, "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300; }
 
 a, a:active, a:focus {
@@ -491,7 +491,7 @@ form.default {
   form.default label, form.default legend {
     font-size: 12px; }
   form.default .req {
-    color: red; }
+    color: #000; }
   form.default input[type=text] + label, form.default input[type=email] + label, form.default input[type=tel] + label {
     display: block; }
   form.default input[type=text], form.default input[type=email], form.default input[type=tel] {
@@ -509,7 +509,7 @@ form.default {
     padding: 10px 40px;
     display: inline-block;
     font-size: 12px; }
-    form.default input[type=submit]:hover {
+    form.default input[type=submit]:hover, form.default input[type=submit]:focus {
       background: #F3933E;
       color: #fff; }
   form.default .checkbox span {
@@ -528,6 +528,9 @@ header {
     color: #000;
     font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     display: inline-block; }
+    header h1 a, header h1 a:focus, header h1 a:hover, header h1 a:active, header h1 a:visited {
+      color: #000;
+      text-decoration: none; }
     @media screen and (min-width: 960px) {
       header h1 {
         float: left; } }
@@ -574,13 +577,14 @@ header {
         display: inline-block;
         margin: 0;
         margin-right: 20px;
-        font-size: 12px; }
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.6); }
         .main-nav li a:last-child {
           margin-right: 40px; }
       .main-nav li a.active {
-        font-family: idlewildBold, "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+        color: #000; }
       .main-nav li a:hover {
-        font-family: idlewildBold, "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; } }
+        color: #000; } }
 
 footer {
   font-size: .8em;
@@ -633,7 +637,7 @@ footer {
     font-size: 12px;
     text-shadow: none;
     margin-top: 40px; }
-    #home .btn:hover {
+    #home .btn:hover, #home .btn:focus {
       background: #fff;
       color: #fff; }
     #home .btn:hover {
@@ -686,6 +690,7 @@ footer {
   #team:after {
     content: '';
     background: url(assets/images/background/bg-2.png) no-repeat bottom left/cover;
+    background-attachment: fixed;
     position: absolute;
     bottom: 0;
     z-index: 0;
@@ -818,12 +823,20 @@ footer {
     margin-left: 20px; }
   #careers #title6 {
     margin-bottom: 20px; }
+  #careers #foli106 {
+    clear: both;
+    display: block; }
+  #careers #title106 {
+    display: block;
+    margin-top: 20px; }
   #careers .submit-wrapper {
     border-top: 1px solid #ccc;
-    padding-top: 20px; }
+    padding-top: 40px;
+    margin-top: 20px; }
 
 #contact {
-  background: url(assets/images/background/bg-3.png) no-repeat center center/cover;
+  background: url(assets/images/background/bg-3.png) no-repeat bottom center/cover;
+  background-attachment: fixed;
   color: #fff;
   padding-top: 300px; }
   #contact .module {
@@ -832,7 +845,7 @@ footer {
     padding-bottom: 100px;
     padding-left: 20px;
     padding-right: 20px; }
-  #contact h3 {
+  #contact h2 {
     margin-bottom: 60px; }
   #contact ul {
     list-style: none;
@@ -855,10 +868,10 @@ footer {
     padding: 10px 40px;
     display: inline-block;
     font-size: 12px; }
-    #contact input[type=submit]:hover {
+    #contact input[type=submit]:hover, #contact input[type=submit]:focus {
       background: #fff;
       color: #fff; }
-    #contact input[type=submit]:hover {
+    #contact input[type=submit]:hover, #contact input[type=submit]:focus {
       color: #000; }
   #contact .contact-form {
     border: none; }
