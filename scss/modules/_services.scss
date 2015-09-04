@@ -70,9 +70,13 @@
 		}
 	}
 
-
 	img {
 		width: 100%;
+	}
+
+	cite {
+		display: none;
+		visibility: hidden;
 	}
 
 	.slick-prev:before, .slick-next:before {
@@ -102,5 +106,7 @@
 		font-family: $title-medium;
 		font-size: 1.25em;
 		line-height: 1.5em;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 }

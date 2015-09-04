@@ -1,0 +1,60 @@
+#contact {
+	background: url(assets/images/background/bg-3.png) no-repeat center center / cover;
+	color: #fff;
+	padding-top: 300px;
+
+	.module {
+		background: rgba(#39382a, .65);
+		padding-top: 100px;
+		padding-bottom: 100px;
+		padding-left: $pad;
+		padding-right: $pad;
+	}
+
+	h3 {
+		margin-bottom: 60px;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	input[type=text], input[type=email] {
+		background: transparent;
+		border: none;
+		border-bottom: 2px solid #fff;
+		margin-bottom: $pad * 2;
+		padding-bottom: 10px;
+		width: 80%;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	input[type=submit] {
+		@include btn(#fff);
+
+
+		&:hover {
+			color: #000;
+		}
+	}
+
+	.contact-form {
+		border: none;
+
+		@media screen and (min-width: $high-tide) {
+			border-right: 1px solid rgba(#fff, .6);
+		}
+	}
+
+	.col-1-3, .col-2-3 {
+		@media screen and (max-width: $high-tide) {
+			float: none;
+			display: block;
+			width: 100%;
+		}
+	}
+}

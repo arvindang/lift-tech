@@ -31,8 +31,6 @@
 	}
 
 	.grid {
-		background: transparent;
-
 		@media screen and (min-width: $low-tide) {
 			margin-bottom: $pad * 2;
 		}

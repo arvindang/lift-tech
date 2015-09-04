@@ -424,7 +424,16 @@ h1, h2, h3 {
   font-family: idlewildBold, "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300; }
 
-.group, .grid:after, form.default:after, header:after, footer:after, #team:after {
+a, a:active, a:focus {
+  color: #fff; }
+
+a:hover {
+  color: rgba(255, 255, 255, 0.65); }
+
+p {
+  line-height: 1.8em; }
+
+.group, .grid:after, form.default:after, header:after, #team:after {
   content: "";
   display: table;
   clear: both; }
@@ -434,7 +443,6 @@ h1, h2, h3 {
   margin: 0 auto; }
 
 .grid {
-  background: white;
   margin: 0 0 20px 0; }
   .grid:after {
     content: ""; }
@@ -557,16 +565,20 @@ header {
     display: none; } }
 
 footer {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  font-size: .8em; }
-  footer .copyright {
-    float: left;
-    margin: 0; }
-  footer .contact-link {
-    float: right;
-    color: white;
+  font-size: .8em;
+  margin-top: 80px; }
+  @media screen and (min-width: 720px) {
+    footer {
+      padding-left: 80px;
+      padding-top: 70px;
+      margin-top: 0; } }
+  footer a {
+    display: block;
+    font-family: idlewildMedium, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 12px;
     text-decoration: none; }
+  footer p {
+    line-height: 1.5em; }
 
 .content h2 {
   margin-top: 0; }
@@ -652,11 +664,9 @@ footer {
   #team img {
     max-width: 100%;
     display: block; }
-  #team .grid {
-    background: transparent; }
-    @media screen and (min-width: 480px) {
-      #team .grid {
-        margin-bottom: 40px; } }
+  @media screen and (min-width: 480px) {
+    #team .grid {
+      margin-bottom: 40px; } }
   #team .title {
     border: 1px solid #eee;
     padding: 10px;
@@ -719,6 +729,9 @@ footer {
     outline: none; }
   #service-slider img {
     width: 100%; }
+  #service-slider cite {
+    display: none;
+    visibility: hidden; }
   #service-slider .slick-prev:before, #service-slider .slick-next:before {
     color: #fff;
     z-index: 10; }
@@ -737,7 +750,9 @@ footer {
     width: 100%;
     font-family: idlewildMedium, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 1.25em;
-    line-height: 1.5em; }
+    line-height: 1.5em;
+    padding-left: 20px;
+    padding-right: 20px; }
 
 #careers {
   padding-bottom: 80px;
@@ -750,7 +765,7 @@ footer {
     @media screen and (min-width: 560px) {
       #careers legend {
         margin-top: 0; } }
-  #careers .group, #careers .grid:after, #careers form.default:after, #careers header:after, #careers footer:after, #careers #team:after {
+  #careers .group, #careers .grid:after, #careers form.default:after, #careers header:after, #careers #team:after {
     width: 100%; }
   #careers #title2 {
     display: block; }
@@ -763,5 +778,54 @@ footer {
   #careers .submit-wrapper {
     border-top: 1px solid #ccc;
     padding-top: 20px; }
+
+#contact {
+  background: url(assets/images/background/bg-3.png) no-repeat center center/cover;
+  color: #fff;
+  padding-top: 300px; }
+  #contact .module {
+    background: rgba(57, 56, 42, 0.65);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px; }
+  #contact h3 {
+    margin-bottom: 60px; }
+  #contact ul {
+    list-style: none;
+    padding: 0; }
+  #contact input[type=text], #contact input[type=email] {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    width: 80%; }
+    #contact input[type=text]:focus, #contact input[type=email]:focus {
+      outline: none; }
+  #contact input[type=submit] {
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+    font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    padding: 10px 40px;
+    display: inline-block;
+    font-size: 12px; }
+    #contact input[type=submit]:hover {
+      background: #fff;
+      color: #fff; }
+    #contact input[type=submit]:hover {
+      color: #000; }
+  #contact .contact-form {
+    border: none; }
+    @media screen and (min-width: 720px) {
+      #contact .contact-form {
+        border-right: 1px solid rgba(255, 255, 255, 0.6); } }
+  @media screen and (max-width: 720px) {
+    #contact .col-1-3, #contact .col-2-3 {
+      float: none;
+      display: block;
+      width: 100%; } }
 
 /*# sourceMappingURL=stylesheet.css.map */
