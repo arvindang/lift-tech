@@ -426,10 +426,10 @@ h1, h2, h3 {
   font-weight: 300; }
 
 a, a:active, a:focus {
-  color: #fff; }
+  color: #F3933E; }
 
 a:hover {
-  color: rgba(255, 255, 255, 0.65); }
+  color: rgba(243, 147, 62, 0.65); }
 
 p {
   line-height: 1.8em; }
@@ -599,6 +599,10 @@ footer {
     font-family: idlewildMedium, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 12px;
     text-decoration: none; }
+  footer a, footer a:visited {
+    color: #fff; }
+  footer a:focus, footer a:hover {
+    color: rgba(255, 255, 255, 0.65); }
   footer p {
     line-height: 1.5em; }
 
@@ -676,6 +680,8 @@ footer {
     text-align: center; }
   #about #logos img {
     max-width: 80px; }
+  #about #logos a:hover img {
+    opacity: .5; }
   #about .slick-slider {
     max-width: 90%;
     margin: 0 auto; }

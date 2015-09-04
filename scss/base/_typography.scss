@@ -54,11 +54,11 @@ h1, h2, h3 {
 }
 
 a, a:active, a:focus {
-  color: #fff;
+  color: $accent;
 }
 
 a:hover {
-  color: rgba(#fff, .65);
+  color: rgba($accent, .65);
 }
 
 p {
