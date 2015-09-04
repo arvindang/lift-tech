@@ -1,23 +1,21 @@
 header {
-	background: rgba(255, 255, 255, .6);
+	background: rgba(255, 255, 255, .9);
 	position: fixed;
 	z-index: 100;
 	top: 0;
 	width: 100%;
-	padding-left: $pad;
-	padding-right: $pad;
+	padding: $pad;
 
 	h1 {
 		margin: 0;
 		font-size: 1.5em;
-		float: left;
 		color: #000;
 		font-family: $title-light;
-		padding-top: 18px;
-	}
+		display: inline-block;
 
-	nav {
-		float: right;
+		@media screen and (min-width: 960px) {
+			float: left;
+		}
 	}
 
 	&:after {

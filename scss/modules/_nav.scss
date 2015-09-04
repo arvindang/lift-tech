@@ -1,45 +1,84 @@
 .main-nav {
-	display: none;
+	overflow-y: scroll;
 
-	@media screen and (min-width: 720px) {
+	.icon {
+		color: #000;
+		position: absolute;
+		top: 15px;
+		right: 20px;
+	}
+
+	.open-nav {
+		font-size: 32px;
+	}
+
+	.close-nav {
+		font-size: 27px;
+	}
+
+	.close-nav:hover {
+		border-bottom: none;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		padding-bottom: 80px;
+	}
+
+	li a {
+		color: #000;
+		text-decoration: none;
+		text-align: center;
+		font-size: 1.7em;
+		// margin: 10px 0;
+		display: inline-block;
+		font-family: $title-light;
+		margin-top: 40px;
+
+		&:first-of-type {
+			// margin-top: 80px;
+		}
+	}
+
+	@media screen and (min-width: 960px) {
 		display: block;
+		float: right;
 
 		ul {
-			list-style: none;
-			margin: 0;
-			padding: 0;
+			padding-bottom: 0;
 		}
 
 		li {
 			text-align: center;
-			display: inline-block;
+			float: left;
 			padding: 0;
+			line-height: 1em;
 		}
 
 		li a {
 			display: inline-block;
-			color: #000;
-			text-decoration: none;
-			border-bottom: 4px solid transparent;
-			padding-top: 20px;
-			padding-bottom: 20px;
-			margin-left: $pad;
-			font-family: $title-light;
+			margin: 0;
+			margin-right: $pad;
 			font-size: 12px;
+
+			// &:first-of-type {
+			// 	margin-top: 0;
+			// }
+
+			&:last-child {
+				margin-right: 40px;
+			}
 		}
 
 		li a.active {
-			border-bottom: 4px solid #000;
+			font-family: $title-bold;
 		}
 
 		li a:hover {
-			border-bottom: 4px solid #000;
+			font-family: $title-bold;
 		}
-	}
-}
-
-.mobile-nav {
-	@media screen and (min-width: 720px) {
-		display: none;
 	}
 }

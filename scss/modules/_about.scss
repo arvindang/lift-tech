@@ -3,6 +3,10 @@
 	padding-left: $pad;
 	padding-top: $pad * 4;
 
+	&:after {
+		@extend .group;
+	}
+
 	h2 {
 		margin-bottom: $pad * 2;
 	}
@@ -13,13 +17,12 @@
 		margin-bottom: $pad * 2;
 	}
 
-	#logos img {
-		display: block;
-		max-width: 80%;
+	#logos {
+		text-align: center;
+	}
 
-		&:focus {
-			outline: none;
-		}
+	#logos img {
+		max-width: 80px;
 	}
 
 	.slick-slider {

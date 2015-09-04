@@ -13,7 +13,10 @@
 	<header>
 		<h1>Lift</h1>
 		<nav class="main-nav">
-			<ul>
+			<a href="#"><i class="icon ion-navicon-round open-nav"></i></a>
+			<a href="#" class="close-nav hide"><i class="icon ion-close"></i></a>
+
+			<ul class="hide menu">
 				<li><a href="#home">Home</a></li>
 				<li><a href="#about">About</a></li>
 				<li><a href="#team">Team</a></li>
@@ -22,22 +25,22 @@
 				<li><a href="#contact-form">Contact</a></li>
 			</ul>
 		</nav>
-
-		<nav class="mobile-nav cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-			<ul>
-				<li><a href="#home">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#team">Team</a></li>
-				<li><a href="#services">Services</a></li>
-			</ul>
-		</nav>
 	</header>
 
 	<section class="content" id="home">
 		<div class="feature">
 			<h2>We see the future</h2>
 			<p>Lift helps your organization see further than ever before, navigating operational, regulatory and legal environments to implement UAV technology in your core business.</p>
-			<a href="mailto:michaell@lift-tech.com" class="btn">Take Flight</a>
+			<a href="#contact-form" class="btn">Take Flight</a>
+		</div>
+
+		<div class="badge">
+			<img src="assets/images/logos/faa-logo.png" class="faa-logo">
+			<p>
+				Section 333 approval.<br>
+				FAA Modernization and<br>
+				Reform Act of 2012
+			</p>
 		</div>
 
 		<video autoplay loop poster="assets/images/background/lift-gif-frames.gif" id="bgvid">
@@ -57,27 +60,18 @@
 				<p>Lift leverages expertise gained in the field with Clayco, Inc. a leading AEC firm. Lift’s strategic relationship accelerates existing projects through real-world expertise while revealing new opportunity through our industry-leading strategists and subject matter experts.</p>
 			</article>
 
-			<div id="logos">
-				<div>
+			<div id="logos" class="grid">
+				<div class="col-1-4">
 					<img src="assets/images/logos/clayco.png">
 				</div>
-				<div>
+				<div class="col-1-4">
 					<img src="assets/images/logos/forum.png">
 				</div>
-				<div>
+				<div class="col-1-4">
 					<img src="assets/images/logos/concrete.png">
 				</div>
-				<div>
+				<div class="col-1-4">
 					<img src="assets/images/logos/ventana.png">
-				</div>
-				<div>
-					<img src="assets/images/logos/clayco-realty.png">
-				</div>
-				<div>
-					<img src="assets/images/logos/clayco-insurance.png">
-				</div>
-				<div>
-					<img src="assets/images/logos/technical-assurance.png">
 				</div>
 			</div> <!-- logos -->
 		</div> <!-- container -->
@@ -597,29 +591,29 @@
 	<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.8/slick.min.js"></script>
 
 	<script type="text/javascript">
-		$('#logos').slick({
-		  infinite: false,
-		  slidesToShow: 4,
-		  slidesToScroll: 3,
-		  arrows: true,
-		  centerPadding: '60px',
-		  responsive: [
-		      {
-		        breakpoint: 600,
-		        settings: {
-		          slidesToShow: 3,
-		          slidesToScroll: 3
-		        }
-		      },
-		      {
-		        breakpoint: 460,
-		        settings: {
-		          slidesToShow: 2,
-		          slidesToScroll: 2
-		        }
-		      }
-		    ]
-		});
+		// $('#logos').slick({
+		//   infinite: false,
+		//   slidesToShow: 4,
+		//   slidesToScroll: 3,
+		//   arrows: true,
+		//   centerPadding: '60px',
+		//   responsive: [
+		//       {
+		//         breakpoint: 600,
+		//         settings: {
+		//           slidesToShow: 3,
+		//           slidesToScroll: 3
+		//         }
+		//       },
+		//       {
+		//         breakpoint: 460,
+		//         settings: {
+		//           slidesToShow: 2,
+		//           slidesToScroll: 2
+		//         }
+		//       }
+		//     ]
+		// });
 
 		$('#service-slider').slick({
 		  slidesToShow: 3,
@@ -648,6 +642,20 @@
 		        }
 		      }
 		    ]
+		});
+
+		$('.open-nav').on('click', function(event) {
+			event.preventDefault();
+			$('.menu').removeClass('hide');
+			$('.close-nav').removeClass('hide');
+			$(this).addClass('hide');
+		});
+
+		$('.close-nav').on('click', function(event) {
+			event.preventDefault();
+			$('.menu').addClass('hide');
+			$('.open-nav').removeClass('hide');
+			$(this).addClass('hide');
 		});
 	</script>
 
