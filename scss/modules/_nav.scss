@@ -26,6 +26,10 @@
 		padding: 0;
 		text-align: center;
 		padding-bottom: 80px;
+
+		&:after {
+			@extend .group;
+		}
 	}
 
 	li a {

@@ -434,7 +434,7 @@ a:hover {
 p {
   line-height: 1.8em; }
 
-.group, .grid:after, form.default:after, header:after, #about:after, #team:after {
+.group, .grid:after, form.default:after, header:after, .main-nav ul:after, #about:after, #team:after {
   content: "";
   display: table;
   clear: both; }
@@ -819,7 +819,7 @@ footer {
     @media screen and (min-width: 560px) {
       #careers legend {
         margin-top: 0; } }
-  #careers .group, #careers .grid:after, #careers form.default:after, #careers header:after, #careers #about:after, #careers #team:after {
+  #careers .group, #careers .grid:after, #careers form.default:after, #careers header:after, #careers .main-nav ul:after, .main-nav #careers ul:after, #careers #about:after, #careers #team:after {
     width: 100%; }
   #careers #title2 {
     display: block; }
