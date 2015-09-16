@@ -477,6 +477,16 @@ p {
     display: block;
     width: 100%; } }
 
+@media all and (max-width: 560px) {
+  .hide-on-mb {
+    display: none; } }
+
+.show-on-mb {
+  display: none; }
+  @media all and (max-width: 560px) {
+    .show-on-mb {
+      display: block; } }
+
 /* Opt-in outside padding */
 .grid-pad {
   padding: 20px 0 20px 20px; }
@@ -497,7 +507,8 @@ form.default {
   form.default input[type=text], form.default input[type=email], form.default input[type=tel] {
     border: 1px solid #C2C2C2;
     margin-bottom: 20px;
-    display: inline-block; }
+    display: inline-block;
+    background: transparent; }
   form.default input[type=radio] {
     display: inline-block; }
   form.default input[type=submit] {
@@ -839,6 +850,55 @@ footer {
     border-top: 1px solid #ccc;
     padding-top: 40px;
     margin-top: 20px; }
+
+#insight {
+  background: #3C414B;
+  color: #fff;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 20px;
+  overflow: hidden; }
+  @media all and (max-width: 760px) {
+    #insight .hide-on-mb {
+      display: none; } }
+  #insight .show-on-mb {
+    display: none; }
+    @media all and (max-width: 760px) {
+      #insight .show-on-mb {
+        display: block; } }
+  @media all and (max-width: 760px) {
+    #insight .col-mb-1 {
+      float: none;
+      display: block;
+      width: 100%; } }
+  #insight h2 {
+    line-height: 1.5em; }
+  #insight h3 {
+    font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  #insight img.show-on-mb {
+    max-width: 100%; }
+  #insight input[type="email"] {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px; }
+    #insight input[type="email"]:focus {
+      outline: none; }
+  #insight input[type="submit"] {
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+    font-family: idlewildBook, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    padding: 10px 40px;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 20px; }
+    #insight input[type="submit"]:hover, #insight input[type="submit"]:focus {
+      background: #fff;
+      color: #fff; }
+    #insight input[type="submit"]:hover {
+      color: #3C414B; }
 
 #contact {
   background: url(assets/images/background/bg-3.png) no-repeat bottom center/cover;

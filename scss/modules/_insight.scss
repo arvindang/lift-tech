@@ -1,0 +1,62 @@
+#insight {
+    background: #3C414B;
+    color: #fff;
+    padding-top: $pad * 4;
+    padding-bottom: $pad * 4;
+    padding-left: $pad;
+    overflow: hidden;
+
+    .hide-on-mb {
+        @media all and (max-width: 760px) {
+          display: none;
+        }
+    }
+
+    .show-on-mb {
+        display: none;
+
+        @media all and (max-width: 760px) {
+          display: block;
+        }
+    }
+
+    .col-mb-1 {
+      @media all and (max-width: 760px) {
+        float: none;
+        display: block;
+        width: 100%;
+      }
+    }
+
+    h2 {
+        line-height: 1.5em;
+    }
+
+    h3 {
+        font-family: $body-regular;
+    }
+
+    img.show-on-mb {
+        max-width: 100%;
+    }
+
+    input[type="email"] {
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid #fff;
+        padding-bottom: 10px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    input[type="submit"] {
+        @include btn(#fff);
+        margin-top: $pad;
+
+        &:hover {
+            color: #3C414B;
+        }
+    }
+}
