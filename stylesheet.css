@@ -508,7 +508,8 @@ form.default {
     border: 1px solid #C2C2C2;
     margin-bottom: 20px;
     display: inline-block;
-    background: transparent; }
+    background: transparent;
+    border-radius: 0; }
   form.default input[type=radio] {
     display: inline-block; }
   form.default input[type=submit] {
@@ -881,7 +882,8 @@ footer {
     background: transparent;
     border: none;
     border-bottom: 2px solid #fff;
-    padding-bottom: 10px; }
+    padding-bottom: 10px;
+    border-radius: 0; }
     #insight input[type="email"]:focus {
       outline: none; }
   #insight input[type="submit"] {
@@ -922,7 +924,8 @@ footer {
     border-bottom: 2px solid #fff;
     margin-bottom: 40px;
     padding-bottom: 10px;
-    width: 80%; }
+    width: 80%;
+    border-radius: 0; }
     #contact input[type=text]:focus, #contact input[type=email]:focus {
       outline: none; }
   #contact input[type=submit] {

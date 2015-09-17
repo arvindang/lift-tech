@@ -1,7 +1,7 @@
-#bgvid {
+/*#bgvid {
 	display: none;
 	visibility: hidden;
-}
+}*/
 
 video {
 	display: block !important;
