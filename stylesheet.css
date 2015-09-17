@@ -752,8 +752,7 @@ footer {
       clear: both; } }
 
 #services {
-  padding-top: 80px;
-  padding-bottom: 80px; }
+  padding-top: 80px; }
   #services .container {
     padding-right: 20px;
     padding-left: 20px; }
@@ -821,6 +820,7 @@ footer {
 
 #careers {
   padding-bottom: 80px;
+  padding-top: 80px;
   padding-left: 20px;
   padding-right: 20px; }
   #careers h3 {
