@@ -618,6 +618,9 @@ footer {
   footer p {
     line-height: 1.5em; }
 
+.panel-adjust {
+  padding-right: 10px; }
+
 .content h2 {
   margin-top: 0; }
 .content p:last-of-type {
