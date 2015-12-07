@@ -1,29 +1,17 @@
 #team {
 	padding-top: $pad * 4;
-	position: relative;
-
-	&:after {
-		content: '';
-		background: url(assets/images/background/bg-2.png) no-repeat bottom left / cover;
-		background-attachment: fixed;
-		@extend .group;
-		position: absolute;
-		bottom: 0;
-		z-index: 0;
-		width: 100%;
-		height: 890px;
-	}
+	background: url(assets/images/background/bg-2.png) no-repeat bottom left / cover;
+	background-attachment: fixed;
 
 	.container {
 		padding-right: $pad;
 		padding-left: $pad;
 		padding-bottom: $pad * 2;
-		position: relative;
-		z-index: 10;
 	}
 
 	h2 {
 		margin-bottom: $pad * 2;
+		color: #fff;
 	}
 
 	img {
@@ -47,6 +35,7 @@
 		padding-bottom: 20px;
 		text-align: center;
 		background: #fff;
+		height: 120px;
 
 		h4, h5 {
 			@extend %reset;
@@ -61,7 +50,49 @@
 
 		h5 {
 			font-size: .7em;
-		    line-height: 1em;
+		    line-height: 1.5em;
+		    padding-top: 8px;
+		}
+	}
+}
+
+#advisors {
+	padding-top: $pad * 4;
+	background: #fff;
+
+	h2 {
+		color: #000;
+	}
+
+	.container {
+		padding-right: $pad;
+		padding-left: $pad;
+		padding-bottom: $pad * 2;
+	}
+
+	.title {
+		border: 1px solid #eee;
+		padding: 10px;
+		padding-bottom: 20px;
+		text-align: center;
+		background: #fff;
+		margin-bottom: 20px;
+		height: 100px;
+
+		h4, h5 {
+			@extend %reset;
+		}
+
+		h4 {
+			font-family: $title-bold;
+			font-size: .8em;
+			line-height: 1.3em;
+			padding-top: 10px;
+		}
+
+		h5 {
+			font-size: .7em;
+		    line-height: 1.5em;
 		    padding-top: 8px;
 		}
 	}

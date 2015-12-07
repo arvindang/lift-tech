@@ -11,7 +11,7 @@ html {
 .hide {
   display: none; }
 
-#home h1, #home h2, #team .title h4, #team .title h5, #services .grid, #service-slider .caption {
+#home h1, #home h2, #team .title h4, #team .title h5, #advisors .title h4, #advisors .title h5, #services .grid, #service-slider .caption {
   margin: 0; }
 
 video#bgvid {
@@ -417,7 +417,7 @@ body {
   font-weight: 300;
   line-height: 1.5em;
   font-size: 14px; }
-  @media all and (min-width: 480px) {
+  @media all and (min-width: 640px) {
     body {
       font-size: 16px; } }
 
@@ -434,7 +434,7 @@ a:hover {
 p {
   line-height: 1.8em; }
 
-.group, .grid:after, form.default:after, header:after, .main-nav ul:after, #about:after, #team:after {
+.group, .grid:after, form.default:after, header:after, .main-nav ul:after, #about:after {
   content: "";
   display: table;
   clear: both; }
@@ -467,7 +467,7 @@ p {
 .col-1-8 {
   width: 12.5%; }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 640px) {
   .col-mb-1-2 {
     width: 50%; } }
 
@@ -707,28 +707,19 @@ footer {
 
 #team {
   padding-top: 80px;
-  position: relative; }
-  #team:after {
-    content: '';
-    background: url(assets/images/background/bg-2.png) no-repeat bottom left/cover;
-    background-attachment: fixed;
-    position: absolute;
-    bottom: 0;
-    z-index: 0;
-    width: 100%;
-    height: 890px; }
+  background: url(assets/images/background/bg-2.png) no-repeat bottom left/cover;
+  background-attachment: fixed; }
   #team .container {
     padding-right: 20px;
     padding-left: 20px;
-    padding-bottom: 40px;
-    position: relative;
-    z-index: 10; }
+    padding-bottom: 40px; }
   #team h2 {
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    color: #fff; }
   #team img {
     max-width: 100%;
     display: block; }
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 640px) {
     #team .grid {
       margin-bottom: 40px; } }
   #team .col-1-3 {
@@ -738,7 +729,8 @@ footer {
     padding: 10px;
     padding-bottom: 20px;
     text-align: center;
-    background: #fff; }
+    background: #fff;
+    height: 120px; }
     #team .title h4 {
       font-family: idlewildBold, "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
       font-size: .8em;
@@ -746,7 +738,34 @@ footer {
       padding-top: 10px; }
     #team .title h5 {
       font-size: .7em;
-      line-height: 1em;
+      line-height: 1.5em;
+      padding-top: 8px; }
+
+#advisors {
+  padding-top: 80px;
+  background: #fff; }
+  #advisors h2 {
+    color: #000; }
+  #advisors .container {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 40px; }
+  #advisors .title {
+    border: 1px solid #eee;
+    padding: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+    background: #fff;
+    margin-bottom: 20px;
+    height: 100px; }
+    #advisors .title h4 {
+      font-family: idlewildBold, "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: .8em;
+      line-height: 1.3em;
+      padding-top: 10px; }
+    #advisors .title h5 {
+      font-size: .7em;
+      line-height: 1.5em;
       padding-top: 8px; }
 
 #services {
@@ -833,7 +852,7 @@ footer {
     @media screen and (min-width: 560px) {
       #careers legend {
         margin-top: 0; } }
-  #careers .group, #careers .grid:after, #careers form.default:after, #careers header:after, #careers .main-nav ul:after, .main-nav #careers ul:after, #careers #about:after, #careers #team:after {
+  #careers .group, #careers .grid:after, #careers form.default:after, #careers header:after, #careers .main-nav ul:after, .main-nav #careers ul:after, #careers #about:after {
     width: 100%; }
   #careers #title2 {
     display: block; }
